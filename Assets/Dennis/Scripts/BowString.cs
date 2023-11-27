@@ -9,6 +9,9 @@ public class BowString : MonoBehaviour
 
     private LineRenderer lineRenderer;
 
+    [SerializeField]
+    private GameObject bowString;
+
     private void Awake()
     {
         lineRenderer = GetComponent<LineRenderer>();
@@ -28,8 +31,11 @@ public class BowString : MonoBehaviour
         lineRenderer.SetPositions(linePoints);
     }
 
-    private void Start()
+    private void OnPickUp()
     {
-        CreateString(null);
+        if (bowString.activeInHierarchy)
+        {
+            CreateString(null);
+        }
     }
 }
