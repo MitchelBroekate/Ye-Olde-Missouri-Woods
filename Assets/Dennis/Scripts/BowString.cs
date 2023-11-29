@@ -9,14 +9,19 @@ public class BowString : MonoBehaviour
 
     private LineRenderer lineRenderer;
 
-    [SerializeField]
-    private GameObject bowString;
+    #region Start + Awake
+    private void Start()
+    {
+        CreateString(null);
+    }
 
     private void Awake()
     {
         lineRenderer = GetComponent<LineRenderer>();
     }
+    #endregion
 
+    #region Bowstring Creation
     public void CreateString(Vector3? midPosition)
     {
         Vector3[] linePoints = new Vector3[midPosition == null ? 2 : 3];
@@ -30,12 +35,5 @@ public class BowString : MonoBehaviour
         lineRenderer.positionCount = linePoints.Length;
         lineRenderer.SetPositions(linePoints);
     }
-
-    private void OnPickUp()
-    {
-        if (bowString.activeInHierarchy)
-        {
-            CreateString(null);
-        }
-    }
+    #endregion
 }

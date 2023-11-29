@@ -1009,7 +1009,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   endpointTop: {fileID: 1788558496895885191}
   endpointBottom: {fileID: 1179131709920443361}
-  bowString: {fileID: 884762607892958856}
 --- !u!23 &4677036260369593477
 MeshRenderer:
   m_ObjectHideFlags: 0
