@@ -398,7 +398,7 @@ GameObject:
   - component: {fileID: 122198630}
   - component: {fileID: 122198632}
   - component: {fileID: 122198631}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Puffer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -733,7 +733,7 @@ GameObject:
   m_Component:
   - component: {fileID: 323663775}
   - component: {fileID: 323663777}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: MainMenu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -872,7 +872,7 @@ GameObject:
   - component: {fileID: 368119651}
   - component: {fileID: 368119650}
   - component: {fileID: 368119649}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: PlayB
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1006,7 +1006,7 @@ GameObject:
   - component: {fileID: 372583293}
   - component: {fileID: 372583295}
   - component: {fileID: 372583294}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: ImageP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1493,7 +1493,7 @@ GameObject:
   - component: {fileID: 418873155}
   - component: {fileID: 418873157}
   - component: {fileID: 418873156}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1754,7 +1754,7 @@ GameObject:
   - component: {fileID: 433344799}
   - component: {fileID: 433344801}
   - component: {fileID: 433344800}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Illu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1830,7 +1830,7 @@ GameObject:
   - component: {fileID: 458723852}
   - component: {fileID: 458723851}
   - component: {fileID: 458723850}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: SettingsB
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2903,7 +2903,7 @@ GameObject:
   - component: {fileID: 703964684}
   - component: {fileID: 703964686}
   - component: {fileID: 703964685}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: ImageS
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3253,7 +3253,7 @@ GameObject:
   - component: {fileID: 763119312}
   - component: {fileID: 763119314}
   - component: {fileID: 763119313}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Doot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3328,7 +3328,7 @@ GameObject:
   - component: {fileID: 763752027}
   - component: {fileID: 763752029}
   - component: {fileID: 763752028}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4305,7 +4305,7 @@ GameObject:
   - component: {fileID: 859909682}
   - component: {fileID: 859909684}
   - component: {fileID: 859909683}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: ImageQ
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4416,7 +4416,7 @@ GameObject:
   - component: {fileID: 912228301}
   - component: {fileID: 912228303}
   - component: {fileID: 912228302}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Options
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5404,7 +5404,7 @@ GameObject:
   - component: {fileID: 1135638111}
   - component: {fileID: 1135638112}
   - component: {fileID: 1135638113}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7021,7 +7021,7 @@ GameObject:
   - component: {fileID: 1585251108}
   - component: {fileID: 1585251110}
   - component: {fileID: 1585251109}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7292,7 +7292,7 @@ GameObject:
   - component: {fileID: 1590480913}
   - component: {fileID: 1590480912}
   - component: {fileID: 1590480911}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: QuitB
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8461,7 +8461,7 @@ GameObject:
   - component: {fileID: 1748563848}
   - component: {fileID: 1748563850}
   - component: {fileID: 1748563849}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Tumb
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8536,7 +8536,7 @@ GameObject:
   - component: {fileID: 1776002469}
   - component: {fileID: 1776002471}
   - component: {fileID: 1776002470}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Tree
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8838,7 +8838,7 @@ GameObject:
   - component: {fileID: 1847880376}
   - component: {fileID: 1847880378}
   - component: {fileID: 1847880377}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Dodge
   m_TagString: Untagged
   m_Icon: {fileID: 0}
