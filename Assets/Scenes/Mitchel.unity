@@ -7787,7 +7787,7 @@ MonoBehaviour:
   _renderingMode: 0
   _useAlphaToMask: 1
   _alphaCutoutThreshold: 0.5
-  _canvasMesh: {fileID: 0}
+  _canvasMesh: {fileID: 1645288297}
   _runtimeOffset: {x: 0, y: 0, z: 0}
   _enableSuperSampling: 1
   _doUnderlayAntiAliasing: 0
@@ -7949,7 +7949,7 @@ Transform:
   m_GameObject: {fileID: 1658196475}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 7.98, z: -5.87}
+  m_LocalPosition: {x: 0, y: 7.98, z: -7.06}
   m_LocalScale: {x: 10.306, y: 10.306, z: 10.306}
   m_ConstrainProportionsScale: 0
   m_Children:
