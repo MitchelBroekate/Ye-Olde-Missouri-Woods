@@ -234,7 +234,7 @@ GameObject:
   - component: {fileID: 135761733}
   - component: {fileID: 135761735}
   - component: {fileID: 135761734}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: HandGrab Point
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -321,7 +321,7 @@ GameObject:
   - component: {fileID: 296282381}
   - component: {fileID: 296282383}
   - component: {fileID: 296282382}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: HandGrab Point
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -423,7 +423,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 0f2a8c6353308ad45bac54e72ebb69e7,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.025
+      value: -0.01
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0f2a8c6353308ad45bac54e72ebb69e7,
         type: 3}
@@ -485,9 +485,23 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arrow
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0f2a8c6353308ad45bac54e72ebb69e7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0f2a8c6353308ad45bac54e72ebb69e7,
+        type: 3}
+      propertyPath: m_TagString
+      value: Arrow
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 0f2a8c6353308ad45bac54e72ebb69e7,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1107748611}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0f2a8c6353308ad45bac54e72ebb69e7, type: 3}
 --- !u!4 &320181690 stripped
@@ -506,7 +520,7 @@ GameObject:
   m_Component:
   - component: {fileID: 325794868}
   - component: {fileID: 325794869}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: HandGrabInteractableString
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -636,7 +650,7 @@ GameObject:
   - component: {fileID: 460787366}
   - component: {fileID: 460787368}
   - component: {fileID: 460787367}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: HandGrab Point
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -772,7 +786,7 @@ GameObject:
   m_Component:
   - component: {fileID: 703952541}
   - component: {fileID: 703952542}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: HandGrabInteractableString_mirror
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -852,7 +866,7 @@ GameObject:
   - component: {fileID: 791595436}
   - component: {fileID: 791595438}
   - component: {fileID: 791595437}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: HandGrab Point
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1044,7 +1058,7 @@ GameObject:
   - component: {fileID: 912660335}
   - component: {fileID: 912660337}
   - component: {fileID: 912660336}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: HandGrab Point
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1130,7 +1144,7 @@ GameObject:
   m_Component:
   - component: {fileID: 935477586}
   - component: {fileID: 935477587}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: BowReleaseAudio
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1248,6 +1262,37 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!1 &1107748610
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1107748611}
+  m_Layer: 3
+  m_Name: SpawnPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1107748611
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1107748610}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.4, z: -0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 320181690}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1155557662 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8054306912369763302, guid: 204925250ba4a5d449010ba4ae2cde97,
@@ -1319,7 +1364,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1317877251}
   - component: {fileID: 1317877252}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: BowStringAudio
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1446,13 +1491,13 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1463576351}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: MidPointVisualObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1463576351
 Transform:
   m_ObjectHideFlags: 0
@@ -1481,7 +1526,7 @@ GameObject:
   - component: {fileID: 1591378423}
   - component: {fileID: 1591378425}
   - component: {fileID: 1591378424}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: HandGrab Point
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1568,7 +1613,7 @@ GameObject:
   - component: {fileID: 1718110815}
   - component: {fileID: 1718110817}
   - component: {fileID: 1718110816}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Visual
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2268,7 +2313,7 @@ GameObject:
   - component: {fileID: 7509001626456201954}
   - component: {fileID: 7509001626456201955}
   - component: {fileID: 7509001626456201956}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: BowGrab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2419,7 +2464,7 @@ GameObject:
   - component: {fileID: 2257310249877705513}
   - component: {fileID: 5769579592465769706}
   - component: {fileID: 4242519828586773810}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: BasicGrabReleaseAudio
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2437,7 +2482,7 @@ GameObject:
   - component: {fileID: 2482609490357897585}
   - component: {fileID: 6951771845658635797}
   - component: {fileID: 5121156726187789160}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: HandGrab Point
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2593,7 +2638,7 @@ GameObject:
   - component: {fileID: 8751676458097379926}
   - component: {fileID: 545252551685532777}
   - component: {fileID: 5894978605340594248}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: HandGrab Point
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2611,7 +2656,7 @@ GameObject:
   - component: {fileID: 5656396744778075611}
   - component: {fileID: 2264842327509612770}
   - component: {fileID: 5237592997021366045}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: HandGrab Point
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2627,7 +2672,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4459536021209080613}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Root
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2661,7 +2706,7 @@ GameObject:
   - component: {fileID: 2798933304994021318}
   - component: {fileID: 86474713030544140}
   - component: {fileID: 7105958758531580419}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Bow
   m_TagString: Bow
   m_Icon: {fileID: 0}
@@ -2678,7 +2723,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7541284998172204597}
   - component: {fileID: 4876862628366588968}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: HandGrabInteractable_mirror
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2852,7 +2897,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4948388799051469652}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EndBottom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2871,7 +2916,7 @@ GameObject:
   - component: {fileID: 7445369787795736782}
   - component: {fileID: 6020075844192214661}
   - component: {fileID: 4692258093096580775}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Visuals
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2889,7 +2934,7 @@ GameObject:
   - component: {fileID: 5575609198163755570}
   - component: {fileID: 2222334233530363485}
   - component: {fileID: 5862444134922796472}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: HandGrab Point
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3231,7 +3276,7 @@ GameObject:
   - component: {fileID: 2138308426129895946}
   - component: {fileID: 6586549191298036119}
   - component: {fileID: 5236742348774108676}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: HandGrab Point
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3303,7 +3348,7 @@ GameObject:
   - component: {fileID: 7215211287896243011}
   - component: {fileID: 1447045017264649169}
   - component: {fileID: 3857901585131657486}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: BasicGrabPickupAudio
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3352,7 +3397,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 240072560649714052}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: MidPointParent
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3731,7 +3776,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5471137909279208631}
   - component: {fileID: 585866237575267436}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: HandGrabInteractable
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3936,7 +3981,7 @@ MonoBehaviour:
   midPointVisualObject: {fileID: 1463576351}
   midPointParent: {fileID: 240072560649714052}
   handObject: {fileID: 3055100713971153289}
-  bowStringStretchLimit: 0.3
+  bowStringStretchLimit: 0.5
   OnBowPulled:
     m_PersistentCalls:
       m_Calls:
@@ -3980,6 +4025,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   midPointVisual: {fileID: 1463576350}
+  arrowPrefab: {fileID: 1750496757183512874, guid: 4172b3d438894f049a95d6e414ece062,
+    type: 3}
+  arrowSpawnPoint: {fileID: 1107748610}
+  arrowMaxSpeed: 10
 --- !u!4 &7541284998172204597
 Transform:
   m_ObjectHideFlags: 0
@@ -4007,7 +4056,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 278633649336875886}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Audio
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4025,7 +4074,7 @@ GameObject:
   - component: {fileID: 1759957094582348733}
   - component: {fileID: 6358455223328144153}
   - component: {fileID: 3400284197712046076}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: HandGrab Point
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4041,7 +4090,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5486254153580984114}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EndTop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4090,7 +4139,7 @@ GameObject:
   - component: {fileID: 9066351586055222903}
   - component: {fileID: 9066351586055222904}
   - component: {fileID: 9066351586055222905}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: MidPointGrabObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4116,7 +4165,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 2, y: 2, z: 2}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &9066351586055222903
 Rigidbody:
@@ -4234,7 +4283,7 @@ GameObject:
   - component: {fileID: 4314275135515332727}
   - component: {fileID: 7984758105065623451}
   - component: {fileID: 1448189705374637104}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: BowStringVisual
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4266,7 +4315,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4037811883520619807}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: BowEndPoints
   m_TagString: Untagged
   m_Icon: {fileID: 0}
