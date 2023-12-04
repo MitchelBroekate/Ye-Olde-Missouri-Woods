@@ -7628,6 +7628,7 @@ GameObject:
   - component: {fileID: 1645288291}
   - component: {fileID: 1645288295}
   - component: {fileID: 1645288296}
+  - component: {fileID: 1645288297}
   m_Layer: 0
   m_Name: UI & Scripts
   m_TagString: Untagged
@@ -7791,6 +7792,27 @@ MonoBehaviour:
   _enableSuperSampling: 1
   _doUnderlayAntiAliasing: 0
   _emulateWhileInEditor: 1
+--- !u!114 &1645288297
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1645288287}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85ef10d17088b3c4cad9a5d13887b157, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _canvasRenderTexture: {fileID: 1135638113}
+  _meshFilter: {fileID: 1645288292}
+  _meshCollider: {fileID: 1645288293}
+  _cylinder: {fileID: 1658196476}
+  _orientation: 0
+  _meshGeneration:
+    VerticesPerDegree: 1.4
+    MaxHorizontalResolution: 128
+    MaxVerticalResolution: 32
 --- !u!1001 &1645526382
 PrefabInstance:
   m_ObjectHideFlags: 0
