@@ -22,13 +22,16 @@ public class ArrowController : MonoBehaviour
 
     public void ReleaseArrow(float strength)
     {
-        midPointVisual.SetActive(false);
-        Debug.Log($"Bow Strength is {strength}");
+        if (strength > 0.5f)
+        {
+            midPointVisual.SetActive(false);
+            Debug.Log($"Bow Strength is {strength}");
 
-        GameObject arrow = Instantiate(arrowPrefab);
-        arrow.transform.position = arrowSpawnPoint.transform.position;
-        arrow.transform.rotation = midPointVisual.transform.rotation;
-        Rigidbody rb = arrow.GetComponent<Rigidbody>();
-        rb.AddForce(midPointVisual.transform.forward * strength * arrowMaxSpeed, ForceMode.Impulse);
+            GameObject arrow = Instantiate(arrowPrefab);
+            arrow.transform.position = arrowSpawnPoint.transform.position;
+            arrow.transform.rotation = midPointVisual.transform.rotation;
+            Rigidbody rb = arrow.GetComponent<Rigidbody>();
+            rb.AddForce(midPointVisual.transform.forward * strength * arrowMaxSpeed, ForceMode.Impulse);
+        }
     }
 }

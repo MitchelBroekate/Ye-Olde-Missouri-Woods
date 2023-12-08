@@ -22,7 +22,7 @@ public class BowController : MonoBehaviour
     [SerializeField]
     private Transform handObject;
     [SerializeField]
-    private float bowStringStretchLimit = 0.5f;
+    private float bowStringStretchLimit = 0.3f;
 
     private Transform interactor;
 
