@@ -13,9 +13,7 @@ public class EnemyBehavior : MonoBehaviour
 
         if (currentHealth <= 0 && isEnemyDead == false)
         {
-            Debug.Log("Dead");
-            gameObject.GetComponent<Renderer>().material.SetColor("Dead", Color.gray);
-            isEnemyDead = true;
+            StartCoroutine("KillEnemy");
         }
     }
 
