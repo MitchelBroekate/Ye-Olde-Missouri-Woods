@@ -11,7 +11,9 @@ public class StickingArrowToSurface : MonoBehaviour
     [SerializeField]
     private GameObject stickingArrow;
 
+    public GameObject arrow;
     public int damage = 5;
+    public float waitTime = 4f;
 
 
     private void OnCollisionEnter(Collision collision)
@@ -19,7 +21,7 @@ public class StickingArrowToSurface : MonoBehaviour
         rb.isKinematic = true;
         myCollider.isTrigger = true;
 
-        GameObject arrow = Instantiate(stickingArrow);
+        arrow = Instantiate(stickingArrow);
         arrow.transform.position = transform.position;
         arrow.transform.forward = transform.forward;
 
@@ -27,10 +29,21 @@ public class StickingArrowToSurface : MonoBehaviour
         {
             arrow.transform.parent = collision.collider.attachedRigidbody.transform;
         }
+        else
+        {
+            StartCoroutine("DestroyStickingArrow");
+        }
 
         //Hier toevoegen wanneer de arrow damage moet doen.
         collision.collider.GetComponent<EnemyBehavior>().TakeDamage(damage);
 
         Destroy(gameObject);
     }
+
+    IEnumerator DestroyStickingArrow()
+    {
+        yield return new WaitForSeconds(waitTime);
+
+        Destroy(arrow);
+    } 
 }
