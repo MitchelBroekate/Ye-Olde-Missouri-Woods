@@ -18,4 +18,14 @@ public class EnemyBehavior : MonoBehaviour
             isEnemyDead = true;
         }
     }
+
+    IEnumerator KillEnemy()
+    {
+        Debug.Log("Dead");
+        isEnemyDead = true;
+
+        yield return new WaitForSeconds(3);
+
+        Destroy(gameObject);
+    }
 }

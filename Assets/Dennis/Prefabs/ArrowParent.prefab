@@ -91,7 +91,9 @@ MonoBehaviour:
   myCollider: {fileID: 7437881355988439960}
   stickingArrow: {fileID: 4980150889111228916, guid: 82fd57764ce690c42b1d840a6e7ae84d,
     type: 3}
+  arrow: {fileID: 4980150889111228916, guid: 82fd57764ce690c42b1d840a6e7ae84d, type: 3}
   damage: 5
+  waitTime: 4
 --- !u!1 &3984288224808576080
 GameObject:
   m_ObjectHideFlags: 0
@@ -379,7 +381,7 @@ SphereCollider:
   m_Enabled: 1
   serializedVersion: 3
   m_Radius: 0.01
-  m_Center: {x: 0, y: 1.4, z: 0}
+  m_Center: {x: 0, y: 1.41, z: 0}
 --- !u!65 &1361987694715153708
 BoxCollider:
   m_ObjectHideFlags: 0

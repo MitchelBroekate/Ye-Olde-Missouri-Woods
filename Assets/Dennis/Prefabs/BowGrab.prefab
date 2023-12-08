@@ -2293,7 +2293,7 @@ MonoBehaviour:
   midPointVisualObject: {fileID: 1747020763792065802}
   midPointParent: {fileID: 4801553001929925914}
   handObject: {fileID: 4207798700060880508}
-  bowStringStretchLimit: 0.5
+  bowStringStretchLimit: 0.3
   OnBowPulled:
     m_PersistentCalls:
       m_Calls:

@@ -18,6 +18,7 @@ public class StickingArrowToSurface : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
+        Debug.Log("Arrow Stuck");
         rb.isKinematic = true;
         myCollider.isTrigger = true;
 
@@ -27,22 +28,26 @@ public class StickingArrowToSurface : MonoBehaviour
 
         if (collision.collider.attachedRigidbody != null)
         {
+            Debug.Log("Arrow Stuck Parent");
+            Destroy(gameObject);
             arrow.transform.parent = collision.collider.attachedRigidbody.transform;
+            collision.collider.GetComponent<EnemyBehavior>().TakeDamage(damage);
         }
         else
         {
             StartCoroutine("DestroyStickingArrow");
         }
 
-        //Hier toevoegen wanneer de arrow damage moet doen.
-        collision.collider.GetComponent<EnemyBehavior>().TakeDamage(damage);
 
-        Destroy(gameObject);
     }
 
     IEnumerator DestroyStickingArrow()
     {
         yield return new WaitForSeconds(waitTime);
+
+        Debug.Log("Arrow Destroyed");
+
+        Destroy(gameObject);
 
         Destroy(arrow);
     } 
