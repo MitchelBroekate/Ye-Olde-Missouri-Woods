@@ -22,7 +22,7 @@ public class ArrowController : MonoBehaviour
 
     public void ReleaseArrow(float strength)
     {
-        if (strength > 0.5f)
+        if (strength >= 0.5f)
         {
             midPointVisual.SetActive(false);
             Debug.Log($"Bow Strength is {strength}");
