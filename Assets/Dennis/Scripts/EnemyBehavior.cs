@@ -22,7 +22,7 @@ public class EnemyBehavior : MonoBehaviour
         Debug.Log("Dead");
         isEnemyDead = true;
 
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(2);
 
         Destroy(gameObject);
     }

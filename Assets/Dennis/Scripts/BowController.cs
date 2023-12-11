@@ -18,6 +18,8 @@ public class BowController : MonoBehaviour
     [SerializeField]
     private Transform midPointVisualObject;
     [SerializeField]
+    private GameObject midPointVisual;
+    [SerializeField]
     private Transform midPointParent;
     [SerializeField]
     private Transform handObject;
@@ -35,11 +37,6 @@ public class BowController : MonoBehaviour
     private void Awake()
     {
         interactable = midPointGrabObject.GetComponent<PointableUnityEventWrapper>();
-    }
-
-    private void Start()
-    {
-
     }
 
     private void Update()
@@ -71,6 +68,8 @@ public class BowController : MonoBehaviour
         interactor = null;
         midPointGrabObject.localPosition = Vector3.zero;
         midPointVisualObject.localPosition = Vector3.zero;
+
+        midPointVisual.SetActive(false);
         bowStringRenderer.CreateString(null);
 
     }

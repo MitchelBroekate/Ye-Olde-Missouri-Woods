@@ -13,7 +13,7 @@ public class StickingArrowToSurface : MonoBehaviour
 
     public GameObject arrow;
     public int damage = 5;
-    public float waitTime = 4f;
+    public float waitTime = 3f;
 
 
     private void OnCollisionEnter(Collision collision)
@@ -31,11 +31,7 @@ public class StickingArrowToSurface : MonoBehaviour
             Debug.Log("Arrow Stuck Parent");
             Destroy(gameObject);
             arrow.transform.parent = collision.collider.attachedRigidbody.transform;
-
-            if (collision.gameObject.tag == "Enemy")
-            {
-                collision.collider.GetComponent<EnemyBehavior>().TakeDamage(damage);
-            }
+            collision.collider.GetComponent<EnemyBehavior>().TakeDamage(damage);
         }
         else
         {
