@@ -19,8 +19,8 @@ public class StickingArrowToSurface : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         Debug.Log("Arrow Stuck");
-        rb.isKinematic = true;
-        myCollider.isTrigger = true;
+        //rb.isKinematic = true;
+        //myCollider.isTrigger = true;
 
         arrow = Instantiate(stickingArrow);
         arrow.transform.position = transform.position;
