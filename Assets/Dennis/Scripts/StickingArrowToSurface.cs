@@ -31,7 +31,11 @@ public class StickingArrowToSurface : MonoBehaviour
             Debug.Log("Arrow Stuck Parent");
             Destroy(gameObject);
             arrow.transform.parent = collision.collider.attachedRigidbody.transform;
-            collision.collider.GetComponent<EnemyBehavior>().TakeDamage(damage);
+
+            if (collision.gameObject.tag == "Enemy")
+            {
+                collision.collider.GetComponent<EnemyBehavior>().TakeDamage(damage);
+            }
         }
         else
         {
