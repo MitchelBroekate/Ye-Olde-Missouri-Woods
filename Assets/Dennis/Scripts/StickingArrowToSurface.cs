@@ -11,7 +11,6 @@ public class StickingArrowToSurface : MonoBehaviour
     [SerializeField]
     private GameObject stickingArrow;
 
-    public GameObject arrow;
     public int damage = 5;
     public float waitTime = 3f;
 
@@ -19,26 +18,27 @@ public class StickingArrowToSurface : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         Debug.Log("Arrow Stuck");
-        //rb.isKinematic = true;
-        //myCollider.isTrigger = true;
+        rb.isKinematic = true;
+        myCollider.isTrigger = true;
 
-        arrow = Instantiate(stickingArrow);
+        GameObject arrow = Instantiate(stickingArrow);
         arrow.transform.position = transform.position;
         arrow.transform.forward = transform.forward;
 
         if (collision.collider.attachedRigidbody != null)
         {
             Debug.Log("Arrow Stuck Parent");
-            Destroy(gameObject);
+            
             arrow.transform.parent = collision.collider.attachedRigidbody.transform;
-            collision.collider.GetComponent<EnemyBehavior>().TakeDamage(damage);
         }
         else
         {
             StartCoroutine("DestroyStickingArrow");
         }
 
+        collision.collider.GetComponent<EnemyBehavior>()?.TakeDamage(damage);
 
+        Destroy(gameObject);
     }
 
     IEnumerator DestroyStickingArrow()
@@ -48,7 +48,5 @@ public class StickingArrowToSurface : MonoBehaviour
         Debug.Log("Arrow Destroyed");
 
         Destroy(gameObject);
-
-        Destroy(arrow);
     } 
 }
