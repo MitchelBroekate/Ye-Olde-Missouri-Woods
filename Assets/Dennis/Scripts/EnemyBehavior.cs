@@ -58,7 +58,7 @@ public class EnemyBehavior : MonoBehaviour
     {
         timer = timeBetweenAttacks;
 
-        float minAttackDistance = 1f;
+        float minAttackDistance = 1.5f;
 
         float distance = Vector3.Distance(agent.transform.position, target.position);
 

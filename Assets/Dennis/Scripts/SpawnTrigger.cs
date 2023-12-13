@@ -11,6 +11,7 @@ public class SpawnTrigger : MonoBehaviour
     private GameObject spawnPoint;
     [SerializeField]
     private int enemyLimit;
+    private float timeBetweenEnemies = 3f;
 
     private void OnTriggerExit(Collider other)
     {
@@ -30,7 +31,7 @@ public class SpawnTrigger : MonoBehaviour
 
             enemyPrefab.transform.SetParent(spawnPoint.transform);
 
-            yield return null;
+            yield return new WaitForSeconds(timeBetweenEnemies);
         }
     }
 }
