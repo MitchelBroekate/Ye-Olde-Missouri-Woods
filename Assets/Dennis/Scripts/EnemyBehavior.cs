@@ -32,7 +32,7 @@ public class EnemyBehavior : MonoBehaviour
     private void Start()
     {
         currentEnemyHealth = maxEnemyHealth;
-        target = GameObject.Find("Player").transform;
+        target = GameObject.Find("OVRCameraRig").transform;
         Debug.Log(target.name);
     }
 
