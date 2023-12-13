@@ -14,7 +14,6 @@ public class StickingArrowToSurface : MonoBehaviour
     public int damage = 5;
     public float waitTime = 3f;
 
-
     private void OnCollisionEnter(Collision collision)
     {
         Debug.Log("Arrow Stuck");
