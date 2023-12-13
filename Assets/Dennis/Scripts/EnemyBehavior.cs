@@ -4,14 +4,18 @@ using UnityEngine;
 
 public class EnemyBehavior : MonoBehaviour
 {
-    public int currentHealth = 20;
-    public static bool isEnemyDead = false;
+    [Header("Attributes")]
+    [SerializeField]
+    private int currentEnemyHealth;
+    bool isEnemyDead = false;
+    [SerializeField]
+    private int enemyDamage;
 
     public void TakeDamage(int damage)
     {
-        currentHealth = currentHealth - damage;
+        currentEnemyHealth = currentEnemyHealth - damage;
 
-        if (currentHealth <= 0 && isEnemyDead == false)
+        if (currentEnemyHealth <= 0 && isEnemyDead == false)
         {
             StartCoroutine("KillEnemy");
         }
