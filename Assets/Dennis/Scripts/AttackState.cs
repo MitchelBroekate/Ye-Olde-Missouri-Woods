@@ -26,10 +26,7 @@ public class AttackState : State
     {
         timer -= Time.deltaTime;
 
-        int currentEnemyHealth = enemy.GetComponent<EnemyBehavior>().currentEnemyHealth;
-
-        //Dit gedeelte voert hij niet uit.
-        if (timer <= 0 && currentEnemyHealth > 0)
+        if (timer <= 0)
         {
             AttackPlayer();
         }
