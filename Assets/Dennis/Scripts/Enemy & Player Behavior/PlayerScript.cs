@@ -19,6 +19,8 @@ public class PlayerScript : MonoBehaviour
     {
         currentPlayerHealth = currentPlayerHealth - enemyDamage;
 
+        Debug.Log("Player Took Damage");
+
         if (currentPlayerHealth <= 0 && playerIsDead == false)
         {
             Debug.Log("Player is Dead");

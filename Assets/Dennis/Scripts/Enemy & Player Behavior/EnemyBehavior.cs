@@ -8,77 +8,71 @@ public class EnemyBehavior : MonoBehaviour
     [Header("Enemy Stats")]
     [SerializeField]
     int maxEnemyHealth;
-    [SerializeField]
-    int currentEnemyHealth;
+    public int currentEnemyHealth;
     bool isEnemyDead = false;
-    [SerializeField]
-    int enemyDamage;
 
-    [Header("Enemy Movement/Attack")]
-    NavMeshAgent agent;
-    private Rigidbody rb;
-    private Transform target;
-    [SerializeField]
-    float timeBetweenAttacks = 5f;
-    float timer;
+    //[Header("Enemy Movement/Attack")]
+    //NavMeshAgent agent;
+    //private Transform target;
+    //float timeBetweenAttacks = 5f;
+    //float timer;
 
     #region Awake/Start/Update
-    private void Awake()
-    {
-        rb = GetComponent<Rigidbody>();
-        agent = GetComponent<NavMeshAgent>();
-    }
+    //private void Awake()
+    //{
+    //    agent = GetComponent<NavMeshAgent>();
+    //}
 
-    private void Start()
-    {
-        currentEnemyHealth = maxEnemyHealth;
-        target = GameObject.Find("OVRCameraRig").transform;
-    }
+    //private void Start()
+    //{
+    //    currentEnemyHealth = maxEnemyHealth;
+    //    target = GameObject.Find("OVRCameraRig").transform;
+    //}
 
-    private void Update()
-    {
-        timer -= Time.deltaTime;
+    //private void Update()
+    //{
+    //    timer -= Time.deltaTime;
 
-        if (target)
-        {
-            agent.SetDestination(target.position);
-            if (timer <= 0 && currentEnemyHealth > 0)
-            {
-                //StartCoroutine("Test");
-                DealDamage();
-            }
-        }
-    }
-    #endregion
+    //    if (target)
+    //    {
+    //        agent.SetDestination(target.position);
+    //        if (timer <= 0 && currentEnemyHealth > 0)
+    //        {
+    //            //StartCoroutine("Test");
+    //            DealDamage();
+    //        }
+    //    }
+    //}
+    //#endregion
 
-    #region Deal/Take Damage
-    public void DealDamage()
-    {
-        timer = timeBetweenAttacks;
+    //#region Deal/Take Damage
+    //public void DealDamage()
+    //{
+    //    timer = timeBetweenAttacks;
 
-        float minAttackDistance = 1.5f;
+    //    float minAttackDistance = 1.5f;
 
-        float distance = Vector3.Distance(agent.transform.position, target.position);
+    //    float distance = Vector3.Distance(agent.transform.position, target.position);
 
-        int currentPlayerHealth = target.GetComponent<PlayerScript>().currentPlayerHealth;
+    //    int currentPlayerHealth = target.GetComponent<PlayerScript>().currentPlayerHealth;
 
-        if (distance < minAttackDistance)
-        {
-            target.GetComponent<PlayerScript>().PlayerTakeDamage(enemyDamage);
-            agent.isStopped = true;
-            agent.speed = 0;
-        }
-        else
-        {
-            agent.isStopped= false;
-            agent.speed = 2;
-        }
+    //    if (distance < minAttackDistance)
+    //    {
+    //        target.GetComponent<PlayerScript>().PlayerTakeDamage(enemyDamage);
+    //        agent.isStopped = true;
+    //        agent.speed = 0;
+    //    }
+    //    else
+    //    {
+    //        agent.isStopped= false;
+    //        agent.speed = 2;
+    //    }
 
-        if (currentPlayerHealth <= 0)
-        {
-            target = null;
-        }
-    }
+    //    if (currentPlayerHealth <= 0)
+    //    {
+    //        target = null;
+    //    }
+    //}
 
     //IEnumerator Test()
     //{

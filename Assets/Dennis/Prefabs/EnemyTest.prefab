@@ -44,10 +44,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c743c7642f3c934eb6ab2f190a57d10, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemy: {fileID: 968842436606655942}
-  idleState: {fileID: 4845245653484196687}
   attackState: {fileID: 6120712111997003724}
   canAttack: 0
+  enemy: {fileID: 968842436606655942}
 --- !u!1 &968842436606655942
 GameObject:
   m_ObjectHideFlags: 0
@@ -194,15 +193,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 968842436606655942}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d6e3a80c8725e814abbb1225ed6bbc59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   maxEnemyHealth: 20
   currentEnemyHealth: 0
-  enemyDamage: 10
-  timeBetweenAttacks: 5
 --- !u!195 &-6570880770684389650
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -316,6 +313,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88c113d0cc4061b438a1e955cd1b9e5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  chaseState: {fileID: 3572028128014390242}
+  playerOutOfRange: 0
+  enemy: {fileID: 968842436606655942}
+  timeBetweenAttacks: 5
+  timer: 0
+  enemyDamage: 10
 --- !u!1 &5619971562298013587
 GameObject:
   m_ObjectHideFlags: 0

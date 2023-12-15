@@ -5,19 +5,17 @@ using UnityEngine.AI;
 
 public class ChaseState : State
 {
+    public AttackState attackState;
+    public bool canAttack;
+
     [Header("Attributes")]
     [SerializeField]
     private GameObject enemy;
     NavMeshAgent agent;
-    Rigidbody rb;
     Transform target;
-
-    public AttackState attackState;
-    public bool canAttack;
 
     private void Awake()
     {
-        rb = GetComponent<Rigidbody>();
         agent = enemy.GetComponent<NavMeshAgent>();
     }
 
@@ -36,7 +34,7 @@ public class ChaseState : State
     {
         float distanceToChase = Vector3.Distance(enemy.transform.position, target.position);
 
-        if (distanceToChase < 10f)
+        if (distanceToChase <= 10f)
         {
             agent.SetDestination(target.position);
         }
@@ -46,9 +44,7 @@ public class ChaseState : State
     {
         float distanceToAttack = Vector3.Distance(enemy.transform.position, target.position);
 
-        Debug.Log(distanceToAttack);
-
-        if (distanceToAttack < 3f)
+        if (distanceToAttack <= 3f)
         {
             canAttack = true;
             agent.isStopped = true;
