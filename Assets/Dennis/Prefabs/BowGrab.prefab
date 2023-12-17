@@ -1119,7 +1119,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: -8208363674989091338, guid: d9712c3c485d6b14e80c1caf9c62fe0a,
     type: 2}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: bd9ee9289ee9291479249e71f2a42691, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -1335,8 +1335,8 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: -8208363674989091338, guid: d9712c3c485d6b14e80c1caf9c62fe0a,
     type: 2}
-  m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 0
+  m_audioClip: {fileID: 8300000, guid: f63b5e29e3c7dd940b85c1c7ce275f50, type: 3}
+  m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -2295,6 +2295,8 @@ MonoBehaviour:
   midPointParent: {fileID: 4801553001929925914}
   handObject: {fileID: 4207798700060880508}
   bowStringStretchLimit: 0.3
+  stringSoundThreshold: 0.001
+  stringPulledAudioSource: {fileID: 2714592796089311618}
   OnBowPulled:
     m_PersistentCalls:
       m_Calls:
@@ -2341,6 +2343,7 @@ MonoBehaviour:
   arrowPrefab: {fileID: 1750496757183512874, guid: 4172b3d438894f049a95d6e414ece062,
     type: 3}
   arrowSpawnPoint: {fileID: 7978772958653206771}
+  bowReleaseAudioSource: {fileID: 4055233201982651352}
   arrowMaxSpeed: 10
 --- !u!1 &6460003066439980764
 GameObject:

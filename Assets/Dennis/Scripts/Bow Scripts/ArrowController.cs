@@ -11,6 +11,8 @@ public class ArrowController : MonoBehaviour
     private GameObject arrowPrefab;
     [SerializeField]
     private GameObject arrowSpawnPoint;
+    [SerializeField]
+    private AudioSource bowReleaseAudioSource;
 
     [SerializeField]
     private float arrowMaxSpeed = 10f;
@@ -22,10 +24,11 @@ public class ArrowController : MonoBehaviour
 
     public void ReleaseArrow(float strength)
     {
+        bowReleaseAudioSource.Play();
+
         if (strength >= 0.75f)
         {
             midPointVisual.SetActive(false);
-            Debug.Log($"Bow Strength is {strength}");
 
             GameObject arrow = Instantiate(arrowPrefab);
             arrow.transform.position = arrowSpawnPoint.transform.position;
