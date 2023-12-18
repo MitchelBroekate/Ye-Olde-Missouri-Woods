@@ -5,16 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class Deathscreen : MonoBehaviour
 {
-    string curScene;
-
-    private void Start()
-    {
-        curScene = SceneManager.GetActiveScene().name;
-    }
-
     public void Restart()
     {
-        SceneManager.LoadScene(curScene);
+        SceneManager.LoadScene("Main Game");
     }
 
     public void BackToMenu()
