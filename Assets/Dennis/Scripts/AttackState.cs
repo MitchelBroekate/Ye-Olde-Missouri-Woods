@@ -17,6 +17,7 @@ public class AttackState : State
     private int enemyDamage;
     [SerializeField]
     private Animator attackAnimation;
+    private bool animationIsDone;
 
     private void Start()
     {
@@ -41,8 +42,7 @@ public class AttackState : State
 
         if (inAttackRange <= 3f)
         {
-            StartCoroutine("AttackAnimation");
-            target.GetComponent<PlayerScript>().PlayerTakeDamage(enemyDamage);
+            StartCoroutine("Attack");
         }
         else
         {
@@ -50,11 +50,13 @@ public class AttackState : State
         }
     }
 
-    IEnumerator AttackAnimation()
+    IEnumerator Attack()
     {
         attackAnimation.SetTrigger("Attack");
 
-        yield return new WaitForSeconds(3);
+        target.GetComponent<PlayerScript>().PlayerTakeDamage(enemyDamage);
+
+        yield return new WaitForSeconds(4);
 
         attackAnimation.ResetTrigger("Attack");
     }
