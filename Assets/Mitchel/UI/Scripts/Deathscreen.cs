@@ -14,7 +14,6 @@ public class Deathscreen : MonoBehaviour
 
     public void Restart()
     {
-
         SceneManager.LoadScene(curScene);
     }
 
