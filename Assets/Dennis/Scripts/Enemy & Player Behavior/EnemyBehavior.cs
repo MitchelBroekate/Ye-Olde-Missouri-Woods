@@ -10,79 +10,9 @@ public class EnemyBehavior : MonoBehaviour
     int maxEnemyHealth;
     public int currentEnemyHealth;
     bool isEnemyDead = false;
+    [SerializeField]
+    private Animator deathAnimation;
 
-    //[Header("Enemy Movement/Attack")]
-    //NavMeshAgent agent;
-    //private Transform target;
-    //float timeBetweenAttacks = 5f;
-    //float timer;
-
-    #region Awake/Start/Update
-    //private void Awake()
-    //{
-    //    agent = GetComponent<NavMeshAgent>();
-    //}
-
-    //private void Start()
-    //{
-    //    currentEnemyHealth = maxEnemyHealth;
-    //    target = GameObject.Find("OVRCameraRig").transform;
-    //}
-
-    //private void Update()
-    //{
-    //    timer -= Time.deltaTime;
-
-    //    if (target)
-    //    {
-    //        agent.SetDestination(target.position);
-    //        if (timer <= 0 && currentEnemyHealth > 0)
-    //        {
-    //            //StartCoroutine("Test");
-    //            DealDamage();
-    //        }
-    //    }
-    //}
-    //#endregion
-
-    //#region Deal/Take Damage
-    //public void DealDamage()
-    //{
-    //    timer = timeBetweenAttacks;
-
-    //    float minAttackDistance = 1.5f;
-
-    //    float distance = Vector3.Distance(agent.transform.position, target.position);
-
-    //    int currentPlayerHealth = target.GetComponent<PlayerScript>().currentPlayerHealth;
-
-    //    if (distance < minAttackDistance)
-    //    {
-    //        target.GetComponent<PlayerScript>().PlayerTakeDamage(enemyDamage);
-    //        agent.isStopped = true;
-    //        agent.speed = 0;
-    //    }
-    //    else
-    //    {
-    //        agent.isStopped= false;
-    //        agent.speed = 2;
-    //    }
-
-    //    if (currentPlayerHealth <= 0)
-    //    {
-    //        target = null;
-    //    }
-    //}
-
-    //IEnumerator Test()
-    //{
-    //    while(Animation.isDone == false)
-    //    {
-    //        yield return null;
-    //    }
-
-    //    print("done");
-    //}
 
     public void TakeDamage(int damage)
     {
@@ -99,9 +29,10 @@ public class EnemyBehavior : MonoBehaviour
         Debug.Log("Dead");
         isEnemyDead = true;
 
-        yield return new WaitForSeconds(2);
+        deathAnimation.SetBool("Death", true);
+
+        yield return new WaitForSeconds(5);
 
         Destroy(gameObject);
     }
-    #endregion
 }

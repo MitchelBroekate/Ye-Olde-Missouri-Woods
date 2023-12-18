@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.AI;
 
 public class ChaseState : State
 {
@@ -11,15 +10,10 @@ public class ChaseState : State
     [Header("Attributes")]
     [SerializeField]
     private GameObject enemy;
-    NavMeshAgent agent;
     Transform target;
+    private float rotationSpeed = 1.5f;
     [SerializeField]
     private float movementSpeed;
-
-    private void Awake()
-    {
-        agent = enemy.GetComponent<NavMeshAgent>();
-    }
 
     private void Start()
     {
@@ -39,7 +33,12 @@ public class ChaseState : State
         if (distanceToChase <= 10f)
         {
             enemy.transform.position = Vector3.MoveTowards(transform.position, target.transform.position, movementSpeed * Time.deltaTime);
-            enemy.transform.LookAt(target.position);
+            Vector3 dir = target.position - enemy.transform.position;
+            Quaternion rotation = Quaternion.Slerp(enemy.transform.rotation, Quaternion.LookRotation(dir), rotationSpeed * Time.deltaTime);
+            rotation.x = 0;
+            rotation.z = 0;
+            enemy.transform.rotation = rotation;
+            enemy.transform.position = Vector3.MoveTowards(transform.position, target.position, movementSpeed * Time.deltaTime);
         }
     }
 

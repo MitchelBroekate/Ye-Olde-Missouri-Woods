@@ -15,6 +15,7 @@ public class IdleState : State
     private int currentPoint;
     [SerializeField]
     private float movementSpeed;
+    private float rotationSpeed = 1.5f;
     private Transform target;
 
     private void Start()
@@ -35,7 +36,12 @@ public class IdleState : State
 
         if (distanceToPoint >= 2f && canSeePlayer == false)
         {
-            enemy.transform.LookAt(patrolPoints[currentPoint].position);
+
+            Vector3 dir = patrolPoints[currentPoint].position - enemy.transform.position;
+            Quaternion rotation = Quaternion.Slerp(enemy.transform.rotation, Quaternion.LookRotation(dir), rotationSpeed * Time.deltaTime);
+            rotation.x = 0;
+            rotation.z = 0;
+            enemy.transform.rotation = rotation;
             enemy.transform.position = Vector3.MoveTowards(transform.position, patrolPoints[currentPoint].position, movementSpeed * Time.deltaTime);
         }
         else
