@@ -13,6 +13,8 @@ public class ChaseState : State
     private GameObject enemy;
     NavMeshAgent agent;
     Transform target;
+    [SerializeField]
+    private float movementSpeed;
 
     private void Awake()
     {
@@ -36,7 +38,8 @@ public class ChaseState : State
 
         if (distanceToChase <= 10f)
         {
-            agent.SetDestination(target.position);
+            enemy.transform.position = Vector3.MoveTowards(transform.position, target.transform.position, movementSpeed * Time.deltaTime);
+            enemy.transform.LookAt(target.position);
         }
     }
 
@@ -47,14 +50,12 @@ public class ChaseState : State
         if (distanceToAttack <= 3f)
         {
             canAttack = true;
-            agent.isStopped = true;
-            agent.speed = 0f;
+            movementSpeed = 0;
         }
         else
         {
             canAttack = false;
-            agent.isStopped = false;
-            agent.speed = 1.5f;
+            movementSpeed = 1.5f;
         }
     }
 
