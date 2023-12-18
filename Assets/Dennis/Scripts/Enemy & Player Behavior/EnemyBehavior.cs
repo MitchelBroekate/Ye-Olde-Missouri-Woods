@@ -13,7 +13,10 @@ public class EnemyBehavior : MonoBehaviour
     [SerializeField]
     private Animator deathAnimation;
 
-
+    private void Awake()
+    {
+        currentEnemyHealth = maxEnemyHealth;
+    }
     public void TakeDamage(int damage)
     {
         currentEnemyHealth = currentEnemyHealth - damage;
