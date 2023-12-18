@@ -109,9 +109,9 @@ GameObject:
   - component: {fileID: 8750990227575034796}
   - component: {fileID: 4674090858120723026}
   - component: {fileID: 662300260476047146}
-  - component: {fileID: 6702744629650530914}
-  - component: {fileID: 5832376266727980539}
   - component: {fileID: 1187050701608386288}
+  - component: {fileID: 5832376266727980539}
+  - component: {fileID: 969491114224114249}
   m_Layer: 0
   m_Name: Great White shark
   m_TagString: Untagged
@@ -128,7 +128,7 @@ Transform:
   m_GameObject: {fileID: 369820997112476237}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 54, y: 2.5, z: 48}
   m_LocalScale: {x: 0.75, y: 0.75, z: 0.75}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -186,41 +186,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!195 &6702744629650530914
-NavMeshAgent:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 369820997112476237}
-  m_Enabled: 0
-  m_AgentTypeID: 0
-  m_Radius: 0.5
-  m_Speed: 1.5
-  m_Acceleration: 4
-  avoidancePriority: 50
-  m_AngularSpeed: 120
-  m_StoppingDistance: 0
-  m_AutoTraverseOffMeshLink: 1
-  m_AutoBraking: 1
-  m_AutoRepath: 1
-  m_Height: 1
-  m_BaseOffset: 0
-  m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
---- !u!114 &5832376266727980539
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 369820997112476237}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 42dc7ab26d645c34897a8cc674fa2c84, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentState: {fileID: 1538152397015042278}
 --- !u!95 &1187050701608386288
 Animator:
   serializedVersion: 5
@@ -242,6 +207,34 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &5832376266727980539
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 369820997112476237}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42dc7ab26d645c34897a8cc674fa2c84, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentState: {fileID: 1538152397015042278}
+--- !u!114 &969491114224114249
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 369820997112476237}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6e3a80c8725e814abbb1225ed6bbc59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxEnemyHealth: 20
+  currentEnemyHealth: 0
+  deathAnimation: {fileID: 1187050701608386288}
 --- !u!1 &799722465381739209
 GameObject:
   m_ObjectHideFlags: 0
@@ -645,6 +638,7 @@ MonoBehaviour:
   timeBetweenAttacks: 5
   timer: 0
   enemyDamage: 10
+  attackAnimation: {fileID: 1187050701608386288}
 --- !u!1 &2562264293169711765
 GameObject:
   m_ObjectHideFlags: 0

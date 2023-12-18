@@ -15,6 +15,8 @@ public class AttackState : State
     public float timer;
     [SerializeField]
     private int enemyDamage;
+    [SerializeField]
+    private Animator attackAnimation;
 
     private void Start()
     {
@@ -37,16 +39,24 @@ public class AttackState : State
 
         float inAttackRange = Vector3.Distance(enemy.transform.position, target.position);
 
-        Debug.Log(inAttackRange);
-
         if (inAttackRange <= 3f)
         {
+            StartCoroutine("AttackAnimation");
             target.GetComponent<PlayerScript>().PlayerTakeDamage(enemyDamage);
         }
         else
         {
             playerOutOfRange = true;
         }
+    }
+
+    IEnumerator AttackAnimation()
+    {
+        attackAnimation.SetTrigger("Attack");
+
+        yield return new WaitForSeconds(3);
+
+        attackAnimation.ResetTrigger("Attack");
     }
 
     public override State RunCurrentState()
