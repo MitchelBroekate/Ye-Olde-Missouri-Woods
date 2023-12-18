@@ -7,28 +7,29 @@ public class AttackState : State
     public ChaseState chaseState;
     public bool playerOutOfRange;
 
-    [Header("Attributes")]
+    [Header("General Attributes")]
     [SerializeField]
     private GameObject enemy;
     Transform target;
-    public float timeBetweenAttacks = 5f;
-    public float timer;
     [SerializeField]
     private int enemyDamage;
+
+    [Header("Animation Attributes")]
     [SerializeField]
     private Animator attackAnimation;
-    private bool animationIsDone;
+    [SerializeField]
+    private float animationTime;
+    private bool canAttack;
 
     private void Start()
     {
         target = GameObject.Find("OVRCameraRig").transform;
+        canAttack = true;
     }
 
     private void Update()
     {
-        timer -= Time.deltaTime;
-
-        if (timer <= 0)
+        if (canAttack == true)
         {
             AttackPlayer();
         }
@@ -36,8 +37,6 @@ public class AttackState : State
 
     void AttackPlayer()
     {
-        timer = timeBetweenAttacks;
-
         float inAttackRange = Vector3.Distance(enemy.transform.position, target.position);
 
         if (inAttackRange <= 3f)
@@ -52,11 +51,15 @@ public class AttackState : State
 
     IEnumerator Attack()
     {
+        canAttack = false;
+
         attackAnimation.SetTrigger("Attack");
 
         target.GetComponent<PlayerScript>().PlayerTakeDamage(enemyDamage);
 
-        yield return new WaitForSeconds(4);
+        yield return new WaitForSeconds(animationTime);
+
+        canAttack = true;
 
         attackAnimation.ResetTrigger("Attack");
     }

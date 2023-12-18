@@ -635,10 +635,9 @@ MonoBehaviour:
   chaseState: {fileID: 7253954943253152581}
   playerOutOfRange: 0
   enemy: {fileID: 369820997112476237}
-  timeBetweenAttacks: 5
-  timer: 0
   enemyDamage: 10
   attackAnimation: {fileID: 1187050701608386288}
+  animationTime: 6.08
 --- !u!1 &2562264293169711765
 GameObject:
   m_ObjectHideFlags: 0

@@ -8,7 +8,6 @@ public class PlayerScript : MonoBehaviour
     [SerializeField]
     private int maxPlayerHealth;
     public int currentPlayerHealth;
-    private bool playerIsDead;
 
     private void Start()
     {
@@ -19,9 +18,9 @@ public class PlayerScript : MonoBehaviour
     {
         currentPlayerHealth = currentPlayerHealth - enemyDamage;
 
-        Debug.Log("Player Took Damage");
+        Debug.Log(currentPlayerHealth);
 
-        if (currentPlayerHealth <= 0 && playerIsDead == false)
+        if (currentPlayerHealth <= 0)
         {
             Debug.Log("Player is Dead");
         }
