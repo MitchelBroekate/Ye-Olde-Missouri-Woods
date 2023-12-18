@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.AI;
 
 public class AttackState : State
 {
@@ -42,7 +41,6 @@ public class AttackState : State
 
         if (inAttackRange <= 3f)
         {
-            Debug.Log("Attacked Player");
             target.GetComponent<PlayerScript>().PlayerTakeDamage(enemyDamage);
         }
         else
