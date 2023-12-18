@@ -33,8 +33,9 @@ public class IdleState : State
     {
         float distanceToPoint = Vector3.Distance(enemy.transform.position, patrolPoints[currentPoint].position);
 
-        if (distanceToPoint >= 0.6f && canSeePlayer == false)
+        if (distanceToPoint >= 2f && canSeePlayer == false)
         {
+            enemy.transform.LookAt(patrolPoints[currentPoint].position);
             enemy.transform.position = Vector3.MoveTowards(transform.position, patrolPoints[currentPoint].position, movementSpeed * Time.deltaTime);
         }
         else
