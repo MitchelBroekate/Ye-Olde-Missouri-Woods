@@ -13,6 +13,8 @@ public class AttackState : State
     Transform target;
     [SerializeField]
     private int enemyDamage;
+    [SerializeField]
+    private int enemyRageValue;
 
     [Header("Animation Attributes")]
     [SerializeField]
@@ -56,6 +58,8 @@ public class AttackState : State
         attackAnimation.SetTrigger("Attack");
 
         target.GetComponent<PlayerScript>().PlayerTakeDamage(enemyDamage);
+
+        target.GetComponent<PlayerScript>().PlayerGetRage(enemyRageValue);
 
         yield return new WaitForSeconds(animationTime);
 

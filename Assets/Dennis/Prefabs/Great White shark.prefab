@@ -636,6 +636,7 @@ MonoBehaviour:
   playerOutOfRange: 0
   enemy: {fileID: 369820997112476237}
   enemyDamage: 10
+  enemyRageValue: 5
   attackAnimation: {fileID: 1187050701608386288}
   animationTime: 6.08
 --- !u!1 &2562264293169711765
