@@ -8,6 +8,8 @@ public class PlayerScript : MonoBehaviour
     [SerializeField]
     private int maxPlayerHealth;
     public int currentPlayerHealth;
+    [SerializeField]
+    private GameObject healthIndicator;
 
     private void Start()
     {
