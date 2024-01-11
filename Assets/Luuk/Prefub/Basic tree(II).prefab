@@ -15,7 +15,7 @@ GameObject:
   m_Name: Particle System
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &5807492278328094684
@@ -4942,6 +4942,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Basic tree(II)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e3bdd2d6308d50f44a84b6a078f36c5a,
+        type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: e3bdd2d6308d50f44a84b6a078f36c5a,
         type: 3}
