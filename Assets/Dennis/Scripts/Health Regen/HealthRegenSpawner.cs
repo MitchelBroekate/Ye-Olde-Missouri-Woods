@@ -12,8 +12,7 @@ public class HealthRegenSpawner : MonoBehaviour
     Transform target;
     [SerializeField]
     private GameObject spawnPoint;
-    [SerializeField]
-    private float cooldown;
+    private float cooldown = 10f;
     private bool canSpawn;
 
 
@@ -39,6 +38,7 @@ public class HealthRegenSpawner : MonoBehaviour
             {
                 if (!canSpawn)
                 {
+
                     GameObject myApplePrefab = Instantiate(applePrefab, spawnPoint.transform.position, Quaternion.identity);
                     canSpawn = true;
 
