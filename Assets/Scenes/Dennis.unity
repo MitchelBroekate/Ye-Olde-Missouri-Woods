@@ -593,11 +593,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 3141720632235795006, guid: 204925250ba4a5d449010ba4ae2cde97,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 7198250005340899373, guid: 204925250ba4a5d449010ba4ae2cde97,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -647,11 +642,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7615820902589264813, guid: 204925250ba4a5d449010ba4ae2cde97,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2052,14 +2042,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: AppleGrab
       objectReference: {fileID: 0}
-    - target: {fileID: 7480725088252314535, guid: c2c4f6277ef353d498f5eb599cfbaf2d,
-        type: 3}
-      propertyPath: _interactables.Array.data[1]
-      value: 
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects:
-    - {fileID: 3366073098928787664, guid: c2c4f6277ef353d498f5eb599cfbaf2d, type: 3}
+    m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2c4f6277ef353d498f5eb599cfbaf2d, type: 3}

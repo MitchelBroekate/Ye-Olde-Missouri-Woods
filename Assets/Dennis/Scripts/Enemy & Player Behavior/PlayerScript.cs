@@ -6,8 +6,7 @@ using UnityEngine.UI;
 public class PlayerScript : MonoBehaviour
 {
     [Header("Player Health")]
-    [SerializeField]
-    private int maxPlayerHealth;
+    public int maxPlayerHealth;
     public int currentPlayerHealth;
     [SerializeField]
     private GameObject healthIndicator;

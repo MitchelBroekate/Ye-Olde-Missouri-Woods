@@ -9,6 +9,7 @@ TagManager:
   - SamplesInfoPanel
   - Arrow
   - Enemy
+  - Apple
   layers:
   - Default
   - TransparentFX
