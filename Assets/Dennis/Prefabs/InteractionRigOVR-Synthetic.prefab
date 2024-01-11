@@ -2759,7 +2759,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7615820902589264813}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -2827,7 +2827,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06283fc87b8f45946891e09ac5bd98a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  thisGameObject: {fileID: 7615820902589264813}
   playerScript: {fileID: 0}
   healAmount: 10
 --- !u!1 &7857287211910943460
