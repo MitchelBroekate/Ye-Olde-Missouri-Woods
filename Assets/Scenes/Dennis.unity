@@ -1542,7 +1542,6 @@ MonoBehaviour:
   applePrefab: {fileID: 6086084823362194594, guid: c2c4f6277ef353d498f5eb599cfbaf2d,
     type: 3}
   spawnPoint: {fileID: 1255227879}
-  cooldown: 5
 --- !u!1 &1339862352
 GameObject:
   m_ObjectHideFlags: 0
