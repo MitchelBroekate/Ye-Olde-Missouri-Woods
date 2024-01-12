@@ -30,8 +30,6 @@ public class HealthRegenSpawner : MonoBehaviour
     {
         float distanceToPlayer = Vector3.Distance(gameObject.transform.position, target.position);
 
-        Debug.Log(distanceToPlayer);
-
         if (distanceToPlayer < 5f)
         {
             if (Random.value > 0.2f)

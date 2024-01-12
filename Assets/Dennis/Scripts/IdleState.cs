@@ -7,6 +7,12 @@ public class IdleState : State
     public ChaseState chaseState;
     public bool canSeePlayer;
 
+    [Header("EnemyType")]
+    [SerializeField]
+    private bool isMelee;
+    [SerializeField]
+    private bool isRanged;
+
     [Header("Atributes")]
     [SerializeField]
     private GameObject enemy;
@@ -36,7 +42,6 @@ public class IdleState : State
 
         if (distanceToPoint >= 2f && canSeePlayer == false)
         {
-
             Vector3 dir = patrolPoints[currentPoint].position - enemy.transform.position;
             Quaternion rotation = Quaternion.Slerp(enemy.transform.rotation, Quaternion.LookRotation(dir), rotationSpeed * Time.deltaTime);
             rotation.x = 0;
@@ -54,9 +59,20 @@ public class IdleState : State
     {
         float distanceToPlayer = Vector3.Distance(enemy.transform.position, target.position);
 
-        if (distanceToPlayer <= 10f)
+        if (isMelee == true)
         {
-            canSeePlayer = true;
+            if (distanceToPlayer <= 10f)
+            {
+                canSeePlayer = true;
+            }
+        }
+
+        if (isRanged == true)
+        {
+            if (distanceToPlayer <= 20f)
+            {
+                canSeePlayer = true;
+            }
         }
     }
 

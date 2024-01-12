@@ -7,10 +7,16 @@ public class ChaseState : State
     public AttackState attackState;
     public bool canAttack;
 
+    [Header("Enemy Type")]
+    [SerializeField]
+    private bool isMelee;
+    [SerializeField]
+    private bool isRanged;
+
     [Header("Attributes")]
     [SerializeField]
     private GameObject enemy;
-    Transform target;
+    private Transform target;
     private float rotationSpeed = 1.5f;
     [SerializeField]
     private float movementSpeed;
@@ -30,15 +36,32 @@ public class ChaseState : State
     {
         float distanceToChase = Vector3.Distance(enemy.transform.position, target.position);
 
-        if (distanceToChase <= 10f)
+        if (isMelee == true)
         {
-            enemy.transform.position = Vector3.MoveTowards(transform.position, target.transform.position, movementSpeed * Time.deltaTime);
-            Vector3 dir = target.position - enemy.transform.position;
-            Quaternion rotation = Quaternion.Slerp(enemy.transform.rotation, Quaternion.LookRotation(dir), rotationSpeed * Time.deltaTime);
-            rotation.x = 0;
-            rotation.z = 0;
-            enemy.transform.rotation = rotation;
-            enemy.transform.position = Vector3.MoveTowards(transform.position, target.position, movementSpeed * Time.deltaTime);
+            if (distanceToChase <= 10f)
+            {
+                enemy.transform.position = Vector3.MoveTowards(transform.position, target.transform.position, movementSpeed * Time.deltaTime);
+                Vector3 dir = target.position - enemy.transform.position;
+                Quaternion rotation = Quaternion.Slerp(enemy.transform.rotation, Quaternion.LookRotation(dir), rotationSpeed * Time.deltaTime);
+                rotation.x = 0;
+                rotation.z = 0;
+                enemy.transform.rotation = rotation;
+                enemy.transform.position = Vector3.MoveTowards(transform.position, target.position, movementSpeed * Time.deltaTime);
+            }
+        }
+
+        if (isRanged == true)
+        {
+            if (distanceToChase <= 20f)
+            {
+                enemy.transform.position = Vector3.MoveTowards(transform.position, target.transform.position, movementSpeed * Time.deltaTime);
+                Vector3 dir = target.position - enemy.transform.position;
+                Quaternion rotation = Quaternion.Slerp(enemy.transform.rotation, Quaternion.LookRotation(dir), rotationSpeed * Time.deltaTime);
+                rotation.x = 0;
+                rotation.z = 0;
+                enemy.transform.rotation = rotation;
+                enemy.transform.position = Vector3.MoveTowards(transform.position, target.position, movementSpeed * Time.deltaTime);
+            }
         }
     }
 
@@ -46,15 +69,32 @@ public class ChaseState : State
     {
         float distanceToAttack = Vector3.Distance(enemy.transform.position, target.position);
 
-        if (distanceToAttack <= 3f)
+        if (isMelee == true)
         {
-            canAttack = true;
-            movementSpeed = 0;
+            if (distanceToAttack <= 3f)
+            {
+                canAttack = true;
+                movementSpeed = 0;
+            }
+            else
+            {
+                canAttack = false;
+                movementSpeed = 1.5f;
+            }
         }
-        else
+
+        if (isRanged == true)
         {
-            canAttack = false;
-            movementSpeed = 1.5f;
+            if (distanceToAttack <= 10f)
+            {
+                canAttack = true;
+                movementSpeed = 0;
+            }
+            else
+            {
+                canAttack = false;
+                movementSpeed = 1.5f;
+            }
         }
     }
 

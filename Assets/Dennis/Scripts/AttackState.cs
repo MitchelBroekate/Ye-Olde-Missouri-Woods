@@ -7,14 +7,26 @@ public class AttackState : State
     public ChaseState chaseState;
     public bool playerOutOfRange;
 
+    [Header("Enemy Type")]
+    [SerializeField]
+    private bool isMelee;
+    [SerializeField]
+    private bool isRanged;
+
     [Header("General Attributes")]
     [SerializeField]
     private GameObject enemy;
     Transform target;
+    public int enemyDamage;
+    public int enemyRageValue;
+
+    [Header("Ranged Enemy Attributes")]
     [SerializeField]
-    private int enemyDamage;
-    [SerializeField]
-    private int enemyRageValue;
+    private Transform firePoint;
+    public float fireRate;
+    public float fireCountdown = 0f;
+    public GameObject bulletPrefab;
+
 
     [Header("Animation Attributes")]
     [SerializeField]
@@ -35,19 +47,40 @@ public class AttackState : State
         {
             AttackPlayer();
         }
+
+        fireCountdown -= Time.deltaTime;
     }
 
     void AttackPlayer()
     {
         float inAttackRange = Vector3.Distance(enemy.transform.position, target.position);
 
-        if (inAttackRange <= 3f)
+        if (isMelee == true)
         {
-            StartCoroutine("Attack");
+            if (inAttackRange <= 3f)
+            {
+                StartCoroutine("Attack");
+            }
+            else
+            {
+                playerOutOfRange = true;
+            }
         }
-        else
+
+        if (isRanged == true)
         {
-            playerOutOfRange = true;
+            if (inAttackRange <= 10f)
+            {
+                if (fireCountdown <= 0f)
+                {
+                    StartCoroutine("RangedAttack");
+                    fireCountdown = 1f / fireRate;
+                }
+            }
+            else
+            {
+                playerOutOfRange = true;
+            }
         }
     }
 
@@ -60,6 +93,27 @@ public class AttackState : State
         target.GetComponent<PlayerScript>().PlayerTakeDamage(enemyDamage);
 
         target.GetComponent<PlayerScript>().PlayerGetRage(enemyRageValue);
+
+        yield return new WaitForSeconds(animationTime);
+
+        canAttack = true;
+
+        attackAnimation.ResetTrigger("Attack");
+    }
+
+    IEnumerator RangedAttack()
+    {
+        GameObject projectileGO = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+        ProjectileBehavior projectile = projectileGO.GetComponent<ProjectileBehavior>();
+
+        if (projectile != null)
+        {
+            projectile.Seek(target);
+        }
+
+        canAttack = false;
+
+        attackAnimation.SetTrigger("Attack");
 
         yield return new WaitForSeconds(animationTime);
 
