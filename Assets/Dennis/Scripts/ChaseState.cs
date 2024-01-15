@@ -43,10 +43,7 @@ public class ChaseState : State
                 enemy.transform.position = Vector3.MoveTowards(transform.position, target.transform.position, movementSpeed * Time.deltaTime);
                 Vector3 dir = target.position - enemy.transform.position;
                 Quaternion rotation = Quaternion.Slerp(enemy.transform.rotation, Quaternion.LookRotation(dir), rotationSpeed * Time.deltaTime);
-                rotation.x = 0;
-                rotation.z = 0;
                 enemy.transform.rotation = rotation;
-                enemy.transform.position = Vector3.MoveTowards(transform.position, target.position, movementSpeed * Time.deltaTime);
             }
         }
 
@@ -57,10 +54,7 @@ public class ChaseState : State
                 enemy.transform.position = Vector3.MoveTowards(transform.position, target.transform.position, movementSpeed * Time.deltaTime);
                 Vector3 dir = target.position - enemy.transform.position;
                 Quaternion rotation = Quaternion.Slerp(enemy.transform.rotation, Quaternion.LookRotation(dir), rotationSpeed * Time.deltaTime);
-                rotation.x = 0;
-                rotation.z = 0;
                 enemy.transform.rotation = rotation;
-                enemy.transform.position = Vector3.MoveTowards(transform.position, target.position, movementSpeed * Time.deltaTime);
             }
         }
     }

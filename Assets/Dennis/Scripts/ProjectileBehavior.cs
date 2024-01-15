@@ -11,6 +11,8 @@ public class ProjectileBehavior : MonoBehaviour
     public int enemyDamage;
     public int enemyRageValue;
 
+    public bool bulletHit;
+
     public void Seek(Transform _target)
     {
         target = _target;
@@ -24,16 +26,32 @@ public class ProjectileBehavior : MonoBehaviour
             return;
         }
 
-        Vector3 direction = target.position - transform.position;
-        float distanceThisFrame = speed * Time.deltaTime;
+        Rigidbody bulletRig = GetComponent<Rigidbody>();
+        bulletRig.AddForce(bulletRig.transform.forward * speed);
 
-        if (direction.magnitude <= distanceThisFrame)
+        //Vector3 direction = target.position - transform.position;
+        //float distanceThisFrame = speed * Time.deltaTime;
+
+        if (bulletHit == true)
         {
             HitTarget();
             return;
         }
 
-        transform.Translate(direction.normalized * distanceThisFrame, Space.World);
+        //transform.Translate(direction.normalized * distanceThisFrame, Space.World);
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            Debug.Log("Collision");
+            bulletHit = true;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
 
     void HitTarget()

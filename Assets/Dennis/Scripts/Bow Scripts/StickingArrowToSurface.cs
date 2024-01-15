@@ -29,6 +29,7 @@ public class StickingArrowToSurface : MonoBehaviour
             Debug.Log("Arrow Stuck Parent");
             
             arrow.transform.parent = collision.collider.attachedRigidbody.transform;
+
         }
         else
         {

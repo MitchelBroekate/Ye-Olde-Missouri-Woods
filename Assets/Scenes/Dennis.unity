@@ -759,7 +759,7 @@ PrefabInstance:
     - target: {fileID: 369820997112476237, guid: 2a802a0773c17914a98f2527d7283072,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1538152397015042278, guid: 2a802a0773c17914a98f2527d7283072,
         type: 3}
@@ -1072,7 +1072,7 @@ PrefabInstance:
     - target: {fileID: 369820997112476237, guid: 2a802a0773c17914a98f2527d7283072,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1538152397015042278, guid: 2a802a0773c17914a98f2527d7283072,
         type: 3}
@@ -1186,7 +1186,7 @@ PrefabInstance:
     - target: {fileID: 369820997112476237, guid: 2a802a0773c17914a98f2527d7283072,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1538152397015042278, guid: 2a802a0773c17914a98f2527d7283072,
         type: 3}
@@ -2210,7 +2210,7 @@ PrefabInstance:
     - target: {fileID: 369820997112476237, guid: 2a802a0773c17914a98f2527d7283072,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1538152397015042278, guid: 2a802a0773c17914a98f2527d7283072,
         type: 3}
@@ -2623,11 +2623,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: RangedPlaceHolder
-      objectReference: {fileID: 0}
-    - target: {fileID: 5733668632018570376, guid: 7385454ae9e913e488cd5a0ee24ec5ba,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
