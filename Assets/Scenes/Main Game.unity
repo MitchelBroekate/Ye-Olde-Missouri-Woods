@@ -8551,6 +8551,16 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 333895915}
     m_Modifications:
+    - target: {fileID: 964656120366920986, guid: 204925250ba4a5d449010ba4ae2cde97,
+        type: 3}
+      propertyPath: rageIndicator
+      value: 
+      objectReference: {fileID: 1283070770}
+    - target: {fileID: 964656120366920986, guid: 204925250ba4a5d449010ba4ae2cde97,
+        type: 3}
+      propertyPath: healthIndicator
+      value: 
+      objectReference: {fileID: 1369163976}
     - target: {fileID: 3141720632235795006, guid: 204925250ba4a5d449010ba4ae2cde97,
         type: 3}
       propertyPath: m_Name
