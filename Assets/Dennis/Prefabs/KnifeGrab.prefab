@@ -917,6 +917,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3243495159383018956}
+  - component: {fileID: 8364118531064857939}
   m_Layer: 0
   m_Name: throwing knife
   m_TagString: Untagged
@@ -941,6 +942,23 @@ Transform:
   - {fileID: 75166186404240015}
   m_Father: {fileID: 6987171028871815050}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8364118531064857939
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8615350544006367011}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 608a4260c29d0be49934c8f6dbb2b520, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 3229737872498239846}
+  myCollider: {fileID: 5732733818365481041}
+  stickingKnife: {fileID: 4980150889111228916, guid: 82fd57764ce690c42b1d840a6e7ae84d,
+    type: 3}
+  knifeDamage: 10
 --- !u!1 &8986042797734644077
 GameObject:
   m_ObjectHideFlags: 0
