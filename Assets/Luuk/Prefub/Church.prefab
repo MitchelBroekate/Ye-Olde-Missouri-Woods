@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8008136454052981406}
   - component: {fileID: 5243996347811487316}
   - component: {fileID: 1567791594639551600}
+  - component: {fileID: 6138894554403567801}
   m_Layer: 0
   m_Name: Church
   m_TagString: Untagged
@@ -31,7 +32,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 4580971820431000186}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &8008136454052981406
@@ -106,3 +108,114 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -4970598034919288069, guid: 62d7fb49fd1aae74888b7fbf4d5ae6f8, type: 3}
+--- !u!205 &6138894554403567801
+LODGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6036677916359688065}
+  serializedVersion: 2
+  m_LocalReferencePoint: {x: -0.22845483, y: 4.805204, z: 1.5661345}
+  m_Size: 12.755215
+  m_FadeMode: 0
+  m_AnimateCrossFading: 0
+  m_LastLODIsBillboard: 0
+  m_LODs:
+  - screenRelativeHeight: 0.39789203
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 5243996347811487316}
+  - screenRelativeHeight: 0.046796244
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 3448012686749776149}
+  - screenRelativeHeight: 0.046796244
+    fadeTransitionWidth: 0
+    renderers: []
+  m_Enabled: 1
+--- !u!1001 &4042078406074967441
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 6380833454839309627}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: c55edeb04f42263488573a35a67934ae,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: c55edeb04f42263488573a35a67934ae,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: c55edeb04f42263488573a35a67934ae,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: c55edeb04f42263488573a35a67934ae,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: c55edeb04f42263488573a35a67934ae,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: c55edeb04f42263488573a35a67934ae,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: c55edeb04f42263488573a35a67934ae,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: c55edeb04f42263488573a35a67934ae,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: c55edeb04f42263488573a35a67934ae,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: c55edeb04f42263488573a35a67934ae,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: c55edeb04f42263488573a35a67934ae,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: eef8d9d097159844eb3e18ed27b1381d, type: 2}
+    - target: {fileID: 919132149155446097, guid: c55edeb04f42263488573a35a67934ae,
+        type: 3}
+      propertyPath: m_Name
+      value: Church(Lowerpoly)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c55edeb04f42263488573a35a67934ae, type: 3}
+--- !u!23 &3448012686749776149 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: c55edeb04f42263488573a35a67934ae,
+    type: 3}
+  m_PrefabInstance: {fileID: 4042078406074967441}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &4580971820431000186 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: c55edeb04f42263488573a35a67934ae,
+    type: 3}
+  m_PrefabInstance: {fileID: 4042078406074967441}
+  m_PrefabAsset: {fileID: 0}
