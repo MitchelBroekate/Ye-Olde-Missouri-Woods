@@ -24,7 +24,7 @@ public class PauseScreen : MonoBehaviour
     #endregion
 
     //void for pausing game/checking if paused, bringing out UI and changing player controls
-    private void Pause()
+    public void Pause()
     {
         if (!isPaused)
         {
