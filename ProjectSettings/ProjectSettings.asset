@@ -147,6 +147,8 @@ PlayerSettings:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 11400000, guid: b6958b19d75565740b7655592b9fb564, type: 2}
+  - {fileID: 893775033774799757, guid: 0f387a034c5498141aa09bf31810a26f, type: 2}
+  - {fileID: 11400000, guid: 0a7853418d2a343488657b6416941600, type: 2}
   metroInputSource: 0
   wsaTransparentSwapchain: 0
   m_HolographicPauseOnTrackingLoss: 1
@@ -167,7 +169,7 @@ PlayerSettings:
   androidSupportedAspectRatio: 1
   androidMaxAspectRatio: 2.1
   applicationIdentifier:
-    Android: nl.deltion.createivedeveloper.vrbaseurp
+    Android: com.DeltionCollege.VRBaseURP
     Standalone: com.deltion.creativedeveloper.vrbaseurp
     iPhone: com.Unity-Technologies.com.unity.template.urp-blank
   buildNumber:
@@ -175,7 +177,7 @@ PlayerSettings:
     VisionOS: 0
     iPhone: 0
     tvOS: 0
-  overrideDefaultApplicationIdentifier: 1
+  overrideDefaultApplicationIdentifier: 0
   AndroidBundleVersionCode: 1
   AndroidMinSdkVersion: 29
   AndroidTargetSdkVersion: 0
@@ -258,7 +260,7 @@ PlayerSettings:
   clonedFromGUID: 3c72c65a16f0acb438eed22b8b16c24a
   templatePackageId: com.unity.template.urp-blank@2.0.6
   templateDefaultScene: Assets/Scenes/SampleScene.unity
-  useCustomMainManifest: 0
+  useCustomMainManifest: 1
   useCustomLauncherManifest: 0
   useCustomMainGradleTemplate: 0
   useCustomLauncherGradleManifest: 0
