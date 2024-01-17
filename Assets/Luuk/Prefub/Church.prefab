@@ -55,7 +55,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
+  m_StaticShadowCaster: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -194,6 +194,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: c55edeb04f42263488573a35a67934ae,
         type: 3}
+      propertyPath: m_StaticShadowCaster
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: c55edeb04f42263488573a35a67934ae,
+        type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: eef8d9d097159844eb3e18ed27b1381d, type: 2}
@@ -201,6 +206,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Church(Lowerpoly)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c55edeb04f42263488573a35a67934ae,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

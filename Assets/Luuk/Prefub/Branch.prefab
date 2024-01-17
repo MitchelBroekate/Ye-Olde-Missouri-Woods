@@ -65,6 +65,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: d37e8daf18662d34cb1413d4d84c4772,
         type: 3}
+      propertyPath: m_StaticShadowCaster
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: d37e8daf18662d34cb1413d4d84c4772,
+        type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: d424dfe9d3d3a0d49933606c6c489b3a, type: 2}
@@ -226,6 +231,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: 2e4ed377f2fc2ce4dba28baad5ce1648,
         type: 3}
+      propertyPath: m_StaticShadowCaster
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 2e4ed377f2fc2ce4dba28baad5ce1648,
+        type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 422d0c1d39b40a94c9d5eae5a2c429b3, type: 2}
@@ -233,6 +243,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Branch(Lowpool)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2e4ed377f2fc2ce4dba28baad5ce1648,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
