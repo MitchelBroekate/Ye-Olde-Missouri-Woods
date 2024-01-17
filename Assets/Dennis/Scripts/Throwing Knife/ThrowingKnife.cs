@@ -5,7 +5,7 @@ using UnityEngine;
 public class ThrowingKnife : MonoBehaviour
 {
     List<Vector3> trackingPos = new List<Vector3>();
-    public float velocity = 1000f;
+    public float velocity;
 
     bool pickedUp;
     Rigidbody rb;
