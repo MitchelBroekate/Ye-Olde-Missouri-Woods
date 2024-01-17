@@ -106,7 +106,7 @@ Transform:
   m_GameObject: {fileID: 543551290097948213}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 0.0000000074505797, w: 1}
-  m_LocalPosition: {x: -0.0143, y: -0.0024, z: 0.0038}
+  m_LocalPosition: {x: -0.066, y: 0.0665, z: -0.1468}
   m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -258,7 +258,7 @@ Transform:
   m_GameObject: {fileID: 5712197757906861210}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 0.0000000074505797, w: 1}
-  m_LocalPosition: {x: 0.011, y: 0.0107, z: -0.0039}
+  m_LocalPosition: {x: -0.066, y: 0.0665, z: -0.1468}
   m_LocalScale: {x: 1.2, y: 1.2, z: 1.2}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -541,8 +541,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _data:
-    startPoint: {x: 0, y: -0.0639, z: 0}
-    endPoint: {x: 0, y: -0.064, z: 0}
+    startPoint: {x: 0, y: 0, z: 0}
+    endPoint: {x: 0, y: 0, z: 0}
     arcOffset: 0
     arcLength: 360
   _relativeTo: {fileID: 4813910715815728276}
