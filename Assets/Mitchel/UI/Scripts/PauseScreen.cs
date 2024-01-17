@@ -74,6 +74,7 @@ public class PauseScreen : MonoBehaviour
 
     }
 
+    //void for quiting the application or opening the quit conformation screen
     public void QuitB()
     {
         if (isPaused)
@@ -90,6 +91,7 @@ public class PauseScreen : MonoBehaviour
         }
     }
 
+    // void for going back to the main pause screen
     public void BackB()
     {
         if (isPaused)

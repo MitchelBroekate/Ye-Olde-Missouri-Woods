@@ -10,6 +10,7 @@ public class MenuButtons : MonoBehaviour
     public GameObject settingsMenu;
     public GameObject audioSettings;
     public GameObject quitOptions;
+    public GameObject creditsMenu;
     #endregion
 
     #region Main Menu Buttons
@@ -22,6 +23,12 @@ public class MenuButtons : MonoBehaviour
     {
         mainMenu.SetActive(false);
         settingsMenu.SetActive(true);
+    }
+
+    public void CreditsButton()
+    {
+        mainMenu.SetActive(false);
+        creditsMenu.SetActive(true);
     }
 
     public void QuitButton()
