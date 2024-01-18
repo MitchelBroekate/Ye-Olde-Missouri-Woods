@@ -25,6 +25,8 @@ public class PauseScreen : MonoBehaviour
     private GameObject locomotion;
     [SerializeField]
     private GameObject pointer;
+    [SerializeField]
+    private GameObject UI;
     #endregion
 
     //void for pausing game/checking if paused, bringing out UI and changing player controls
@@ -39,6 +41,8 @@ public class PauseScreen : MonoBehaviour
             locomoter.enableWalk = false;
             pointy.pointerActive = false;
 
+            UI.SetActive(true);
+
             isPaused = true;
 
             Time.timeScale = 0f;
@@ -47,6 +51,8 @@ public class PauseScreen : MonoBehaviour
         {
             locomoter.enableWalk = true;
             pointy.pointerActive= true;
+
+            UI.SetActive(false);
 
             isPaused = false;
 
