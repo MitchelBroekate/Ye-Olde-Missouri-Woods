@@ -13,7 +13,7 @@ public class PauseScreen : MonoBehaviour
     private Vector3 pausePos;
 
     [SerializeField]
-    private GameObject notPaused;
+    private GameObject player;
 
     [SerializeField]
     private GameObject optionsPaused;
@@ -31,7 +31,9 @@ public class PauseScreen : MonoBehaviour
     private GameObject pointerRight;
 
     [SerializeField]
-    private GameObject UI;
+    private GameObject uI;
+    [SerializeField]
+    private GameObject uIOverlay;
 
     [SerializeField]
     private GameObject rayLeft;
@@ -47,6 +49,8 @@ public class PauseScreen : MonoBehaviour
         
         if (!isPaused)
         {
+            transform.position = player.transform.forward;
+
             locomoter.enableWalk = false;
 
             pointerLeft.SetActive(false);
@@ -55,7 +59,8 @@ public class PauseScreen : MonoBehaviour
             rayLeft.SetActive(true);
             rayRight.SetActive(true);
 
-            UI.SetActive(true);
+            uI.SetActive(true);
+            uIOverlay.SetActive(false);
 
             isPaused = true;
 
@@ -71,7 +76,8 @@ public class PauseScreen : MonoBehaviour
             rayLeft.SetActive(false);
             rayRight.SetActive(false);
 
-            UI.SetActive(false);
+            uI.SetActive(false);
+            uIOverlay.SetActive(true);
 
             isPaused = false;
 
