@@ -36,7 +36,6 @@ namespace Oculus.Interaction
     [DefaultExecutionOrder(1)]
     public class ActiveStateTracker : MonoBehaviour
     {
-        public bool pointerActive = true;
 
         [Tooltip("The IActiveState to be tracked.")]
         [SerializeField, Interface(typeof(IActiveState))]
@@ -81,20 +80,17 @@ namespace Oculus.Interaction
 
         protected virtual void Update()
         {
-            if (pointerActive)
-            {
+
                 if (_active == ActiveState.Active) return;
 
                 _active = ActiveState.Active;
                 SetDependentsActive(ActiveState.Active);
-            }
 
         }
 
         private void SetDependentsActive(bool active)
         {
-            if (pointerActive)
-            {
+
                 for (int i = 0; i < _gameObjects.Count; ++i)
                 {
                     _gameObjects[i].SetActive(active);
@@ -104,7 +100,6 @@ namespace Oculus.Interaction
                 {
                     _monoBehaviours[i].enabled = active;
                 }
-            }
 
         }
 

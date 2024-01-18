@@ -872,6 +872,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d952c175ec3c6554199fd744548ce50a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &251007971 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1374117467572006422, guid: 204925250ba4a5d449010ba4ae2cde97,
+    type: 3}
+  m_PrefabInstance: {fileID: 1785357565}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &256434801
 GameObject:
   m_ObjectHideFlags: 0
@@ -1671,12 +1677,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   notPaused: {fileID: 1785357567}
-  paused: {fileID: 337249233}
   optionsPaused: {fileID: 1046791689}
   settingsPaused: {fileID: 1172775104}
   quitPaused: {fileID: 425550842}
   locomotion: {fileID: 742838025}
-  pointer: {fileID: 927226506}
+  pointer: {fileID: 251007971}
 --- !u!114 &333895917
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4491,12 +4496,6 @@ RectTransform:
   m_AnchoredPosition: {x: -0.509, y: -0.328}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!1 &927226506 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8540325645401120210, guid: 204925250ba4a5d449010ba4ae2cde97,
-    type: 3}
-  m_PrefabInstance: {fileID: 1785357565}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &938959089
 GameObject:
   m_ObjectHideFlags: 0

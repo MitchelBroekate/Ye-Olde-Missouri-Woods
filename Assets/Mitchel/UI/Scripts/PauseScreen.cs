@@ -31,7 +31,7 @@ public class PauseScreen : MonoBehaviour
     public void Pause()
     {
        PlayerLocomotor locomoter = locomotion.GetComponent<PlayerLocomotor>();
-       ActiveStateTracker pointy = pointer.GetComponent<ActiveStateTracker>();
+       ControllerPointerPose pointy = pointer.GetComponent<ControllerPointerPose>();
        
         
         if (!isPaused)
