@@ -21,14 +21,22 @@ public class PauseScreen : MonoBehaviour
     private GameObject settingsPaused;
     [SerializeField]
     private GameObject quitPaused;
+
     [SerializeField]
     private GameObject locomotion;
+
     [SerializeField]
     private GameObject pointerLeft;
     [SerializeField]
     private GameObject pointerRight;
+
     [SerializeField]
     private GameObject UI;
+
+    [SerializeField]
+    private GameObject rayLeft;
+    [SerializeField]
+    private GameObject rayRight;
     #endregion
 
     //void for pausing game/checking if paused, bringing out UI and changing player controls
@@ -44,6 +52,9 @@ public class PauseScreen : MonoBehaviour
             pointerLeft.SetActive(false);
             pointerRight.SetActive(false);
 
+            rayLeft.SetActive(true);
+            rayRight.SetActive(true);
+
             UI.SetActive(true);
 
             isPaused = true;
@@ -56,6 +67,9 @@ public class PauseScreen : MonoBehaviour
 
             pointerLeft.SetActive(true);
             pointerRight.SetActive(true);
+
+            rayLeft.SetActive(false);
+            rayRight.SetActive(false);
 
             UI.SetActive(false);
 
