@@ -1227,7 +1227,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0f6c2fa0d622d747b5e7ed8c261ae2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  notPaused: {fileID: 1785357567}
+  player: {fileID: 1785357567}
   optionsPaused: {fileID: 1046791689}
   settingsPaused: {fileID: 1172775104}
   quitPaused: {fileID: 425550842}
@@ -4845,7 +4845,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1241544878
 Transform:
   m_ObjectHideFlags: 0
@@ -6620,7 +6620,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1785357567 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 3141720632235795006, guid: 204925250ba4a5d449010ba4ae2cde97,
+  m_CorrespondingSourceObject: {fileID: 8054306912369763296, guid: 204925250ba4a5d449010ba4ae2cde97,
     type: 3}
   m_PrefabInstance: {fileID: 1785357565}
   m_PrefabAsset: {fileID: 0}

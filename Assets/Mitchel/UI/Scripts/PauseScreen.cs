@@ -49,7 +49,7 @@ public class PauseScreen : MonoBehaviour
         
         if (!isPaused)
         {
-            transform.position = player.transform.forward;
+            player.transform.forward = transform.position;
 
             locomoter.enableWalk = false;
 
