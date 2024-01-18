@@ -36,6 +36,8 @@ namespace Oculus.Interaction.Locomotion
         private Transform _playerOrigin;
         [SerializeField]
         private Transform _playerHead;
+        
+        public bool enableWalk = true;
 
         private Action<LocomotionEvent, Pose> _whenLocomotionEventHandled = delegate { };
         public event Action<LocomotionEvent, Pose> WhenLocomotionEventHandled
@@ -87,41 +89,46 @@ namespace Oculus.Interaction.Locomotion
 
         private void MovePlayer()
         {
-            while (_deferredEvent.Count > 0)
+            if (enableWalk)
             {
-                LocomotionEvent locomotionEvent = _deferredEvent.Dequeue();
-                Pose originalPose = _playerOrigin.GetPose();
-                MovePlayer(locomotionEvent.Pose.position, locomotionEvent.Translation);
-                RotatePlayer(locomotionEvent.Pose.rotation, locomotionEvent.Rotation);
-                Pose delta = PoseUtils.Delta(originalPose, _playerOrigin.GetPose());
-                _whenLocomotionEventHandled.Invoke(locomotionEvent, delta);
+                while (_deferredEvent.Count > 0)
+                {
+                    LocomotionEvent locomotionEvent = _deferredEvent.Dequeue();
+                    Pose originalPose = _playerOrigin.GetPose();
+                    MovePlayer(locomotionEvent.Pose.position, locomotionEvent.Translation);
+                    RotatePlayer(locomotionEvent.Pose.rotation, locomotionEvent.Rotation);
+                    Pose delta = PoseUtils.Delta(originalPose, _playerOrigin.GetPose());
+                    _whenLocomotionEventHandled.Invoke(locomotionEvent, delta);
+                }
             }
         }
-
         private void MovePlayer(Vector3 targetPosition, LocomotionEvent.TranslationType translationMode)
         {
-            if (translationMode == LocomotionEvent.TranslationType.None)
+            if (enableWalk)
             {
-                return;
-            }
-            if (translationMode == LocomotionEvent.TranslationType.Absolute)
-            {
-                Vector3 positionOffset = _playerOrigin.position - _playerHead.position;
-                positionOffset.y = 0f;
-                _playerOrigin.position = targetPosition + positionOffset;
-            }
-            else if (translationMode == LocomotionEvent.TranslationType.AbsoluteEyeLevel)
-            {
-                Vector3 positionOffset = _playerOrigin.position - _playerHead.position;
-                _playerOrigin.position = targetPosition + positionOffset;
-            }
-            else if (translationMode == LocomotionEvent.TranslationType.Relative)
-            {
-                _playerOrigin.position = _playerOrigin.position + targetPosition;
-            }
-            else if (translationMode == LocomotionEvent.TranslationType.Velocity)
-            {
-                _playerOrigin.position = _playerOrigin.position + targetPosition * Time.deltaTime;
+                if (translationMode == LocomotionEvent.TranslationType.None)
+                {
+                    return;
+                }
+                if (translationMode == LocomotionEvent.TranslationType.Absolute)
+                {
+                    Vector3 positionOffset = _playerOrigin.position - _playerHead.position;
+                    positionOffset.y = 0f;
+                    _playerOrigin.position = targetPosition + positionOffset;
+                }
+                else if (translationMode == LocomotionEvent.TranslationType.AbsoluteEyeLevel)
+                {
+                    Vector3 positionOffset = _playerOrigin.position - _playerHead.position;
+                    _playerOrigin.position = targetPosition + positionOffset;
+                }
+                else if (translationMode == LocomotionEvent.TranslationType.Relative)
+                {
+                    _playerOrigin.position = _playerOrigin.position + targetPosition;
+                }
+                else if (translationMode == LocomotionEvent.TranslationType.Velocity)
+                {
+                    _playerOrigin.position = _playerOrigin.position + targetPosition * Time.deltaTime;
+                }
             }
         }
 

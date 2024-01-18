@@ -1,3 +1,4 @@
+using Oculus.Interaction.Locomotion;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
@@ -21,13 +22,19 @@ public class PauseScreen : MonoBehaviour
     private GameObject settingsPaused;
     [SerializeField]
     private GameObject quitPaused;
+    [SerializeField]
+    private GameObject locomotion;
     #endregion
 
     //void for pausing game/checking if paused, bringing out UI and changing player controls
     public void Pause()
     {
+       PlayerLocomotor locomoter = locomotion.GetComponent<PlayerLocomotor>();
+        
         if (!isPaused)
         {
+            locomoter.enableWalk = false;
+
             isPaused = true;
 
             pausePos = notPaused.transform.position;
