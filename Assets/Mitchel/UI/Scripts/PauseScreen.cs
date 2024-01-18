@@ -1,3 +1,4 @@
+using Oculus.Interaction;
 using Oculus.Interaction.Locomotion;
 using System.Collections;
 using System.Collections.Generic;
@@ -13,8 +14,6 @@ public class PauseScreen : MonoBehaviour
 
     [SerializeField]
     private GameObject notPaused;
-    [SerializeField]
-    private GameObject paused;
 
     [SerializeField]
     private GameObject optionsPaused;
@@ -24,33 +23,32 @@ public class PauseScreen : MonoBehaviour
     private GameObject quitPaused;
     [SerializeField]
     private GameObject locomotion;
+    [SerializeField]
+    private GameObject pointer;
     #endregion
 
     //void for pausing game/checking if paused, bringing out UI and changing player controls
     public void Pause()
     {
        PlayerLocomotor locomoter = locomotion.GetComponent<PlayerLocomotor>();
+       ActiveStateTracker pointy = pointer.GetComponent<ActiveStateTracker>();
+       
         
         if (!isPaused)
         {
             locomoter.enableWalk = false;
+            pointy.pointerActive = false;
 
             isPaused = true;
-
-            pausePos = notPaused.transform.position;
-            paused.transform.position = pausePos;
-
-            notPaused.SetActive(false);
-            paused.SetActive(true);
 
             Time.timeScale = 0f;
         }
         else
         {
-            isPaused = false;
+            locomoter.enableWalk = true;
+            pointy.pointerActive= true;
 
-            notPaused.SetActive(true);
-            paused.SetActive(false);
+            isPaused = false;
 
             Time.timeScale = 1f;
         }
@@ -62,9 +60,6 @@ public class PauseScreen : MonoBehaviour
         if (isPaused)
         {
             isPaused = false;
-
-            notPaused.SetActive(true);
-            paused.SetActive(false);
 
             Time.timeScale = 1f;
         }

@@ -84,7 +84,8 @@ namespace Oculus.Interaction.Locomotion
 
         public void HandleLocomotionEvent(LocomotionEvent locomotionEvent)
         {
-            _deferredEvent.Enqueue(locomotionEvent);
+
+                _deferredEvent.Enqueue(locomotionEvent);
         }
 
         private void MovePlayer()
@@ -134,30 +135,35 @@ namespace Oculus.Interaction.Locomotion
 
         private void RotatePlayer(Quaternion targetRotation, LocomotionEvent.RotationType rotationMode)
         {
-            if (rotationMode == LocomotionEvent.RotationType.None)
+            if(enableWalk)
             {
-                return;
-            }
-            Vector3 originalHeadPosition = _playerHead.position;
-            if (rotationMode == LocomotionEvent.RotationType.Absolute)
-            {
-                Vector3 headForward = Vector3.ProjectOnPlane(_playerHead.forward, _playerOrigin.up).normalized;
-                Quaternion headFlatRotation = Quaternion.LookRotation(headForward, _playerOrigin.up);
-                Quaternion rotationOffset = Quaternion.Inverse(_playerOrigin.rotation) * headFlatRotation;
-                _playerOrigin.rotation = Quaternion.Inverse(rotationOffset) * targetRotation;
-            }
-            else if (rotationMode == LocomotionEvent.RotationType.Relative)
-            {
-                _playerOrigin.rotation = targetRotation * _playerOrigin.rotation;
-            }
-            else if (rotationMode == LocomotionEvent.RotationType.Velocity)
-            {
-                targetRotation.ToAngleAxis(out float angle, out Vector3 axis);
-                angle *= Time.deltaTime;
 
-                _playerOrigin.rotation = Quaternion.AngleAxis(angle, axis) * _playerOrigin.rotation;
+                if (rotationMode == LocomotionEvent.RotationType.None)
+                {
+                    return;
+                }
+                Vector3 originalHeadPosition = _playerHead.position;
+                if (rotationMode == LocomotionEvent.RotationType.Absolute)
+                {
+                    Vector3 headForward = Vector3.ProjectOnPlane(_playerHead.forward, _playerOrigin.up).normalized;
+                    Quaternion headFlatRotation = Quaternion.LookRotation(headForward, _playerOrigin.up);
+                    Quaternion rotationOffset = Quaternion.Inverse(_playerOrigin.rotation) * headFlatRotation;
+                    _playerOrigin.rotation = Quaternion.Inverse(rotationOffset) * targetRotation;
+                }
+                else if (rotationMode == LocomotionEvent.RotationType.Relative)
+                {
+                    _playerOrigin.rotation = targetRotation * _playerOrigin.rotation;
+                }
+                else if (rotationMode == LocomotionEvent.RotationType.Velocity)
+                {
+                    targetRotation.ToAngleAxis(out float angle, out Vector3 axis);
+                    angle *= Time.deltaTime;
+
+                    _playerOrigin.rotation = Quaternion.AngleAxis(angle, axis) * _playerOrigin.rotation;
+                }
+                _playerOrigin.position = _playerOrigin.position + originalHeadPosition - _playerHead.position;
+
             }
-            _playerOrigin.position = _playerOrigin.position + originalHeadPosition - _playerHead.position;
         }
 
         #region Inject
