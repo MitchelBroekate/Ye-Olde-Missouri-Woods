@@ -24,7 +24,9 @@ public class PauseScreen : MonoBehaviour
     [SerializeField]
     private GameObject locomotion;
     [SerializeField]
-    private GameObject pointer;
+    private GameObject pointerLeft;
+    [SerializeField]
+    private GameObject pointerRight;
     [SerializeField]
     private GameObject UI;
     #endregion
@@ -33,13 +35,14 @@ public class PauseScreen : MonoBehaviour
     public void Pause()
     {
        PlayerLocomotor locomoter = locomotion.GetComponent<PlayerLocomotor>();
-       ControllerPointerPose pointy = pointer.GetComponent<ControllerPointerPose>();
        
         
         if (!isPaused)
         {
             locomoter.enableWalk = false;
-            pointy.pointerActive = false;
+
+            pointerLeft.SetActive(false);
+            pointerRight.SetActive(false);
 
             UI.SetActive(true);
 
@@ -50,7 +53,9 @@ public class PauseScreen : MonoBehaviour
         else
         {
             locomoter.enableWalk = true;
-            pointy.pointerActive= true;
+
+            pointerLeft.SetActive(true);
+            pointerRight.SetActive(true);
 
             UI.SetActive(false);
 
