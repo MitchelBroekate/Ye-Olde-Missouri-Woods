@@ -4012,6 +4012,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 438e12c9002f2c8489c81a2d3472b18d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pointerActive: 1
   _controller: {fileID: 4829311477385469081}
   _offset: {x: 0, y: 0, z: 0}
 --- !u!1 &613598423431509228
@@ -4670,7 +4671,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _interactors:
-  - {fileID: 6487603876349146454}
   - {fileID: 3730016393254669746}
   _activeState: {fileID: 0}
   _candidateComparer: {fileID: 0}
@@ -11983,6 +11983,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _playerOrigin: {fileID: 4660608122688579623}
   _playerHead: {fileID: 2361783766740539330}
+  enableWalk: 1
 --- !u!1 &2004443425149803845
 GameObject:
   m_ObjectHideFlags: 0
@@ -13237,6 +13238,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 438e12c9002f2c8489c81a2d3472b18d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pointerActive: 1
   _controller: {fileID: 389676077080208298}
   _offset: {x: 0, y: 0, z: 0.01}
 --- !u!1 &2195470717033788166
@@ -24381,7 +24383,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _interactors:
   - {fileID: 8295434546605916829}
-  - {fileID: 8279706674567752401}
   _activeState: {fileID: 0}
   _candidateComparer: {fileID: 0}
   _maxIterationsPerFrame: 3
@@ -27092,6 +27093,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 438e12c9002f2c8489c81a2d3472b18d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pointerActive: 1
   _controller: {fileID: 862232514197834155}
   _offset: {x: 0, y: 0, z: 0}
 --- !u!1 &4148464127570808992
@@ -33447,6 +33449,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 438e12c9002f2c8489c81a2d3472b18d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pointerActive: 1
   _controller: {fileID: 1048282271996885188}
   _offset: {x: 0, y: 0, z: 0.01}
 --- !u!1 &4937505672771245679
@@ -55277,7 +55280,7 @@ Transform:
   m_GameObject: {fileID: 8678260756944071332}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
