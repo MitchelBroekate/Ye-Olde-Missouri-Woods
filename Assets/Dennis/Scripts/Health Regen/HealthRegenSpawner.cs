@@ -32,7 +32,7 @@ public class HealthRegenSpawner : MonoBehaviour
 
         if (distanceToPlayer < 5f)
         {
-            if (Random.value > 0.2f)
+            if (Random.value > 0.1f)
             {
                 if (!canSpawn)
                 {

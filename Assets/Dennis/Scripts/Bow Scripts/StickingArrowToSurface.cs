@@ -16,44 +16,30 @@ public class StickingArrowToSurface : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("Enemy"))
+        Debug.Log("Arrow Stuck");
+        rb.isKinematic = true;
+        myCollider.isTrigger = true;
+
+        GameObject arrow = Instantiate(stickingArrow);
+        arrow.transform.position = transform.position;
+        arrow.transform.forward = transform.forward;
+        
+        if (collision.collider.attachedRigidbody != null)
         {
-            Debug.Log("Arrow Stuck");
-            rb.isKinematic = true;
-            myCollider.isTrigger = true;
-
-            GameObject arrow = Instantiate(stickingArrow);
-            arrow.transform.position = transform.position;
-            arrow.transform.forward = transform.forward;
-
-            if (collision.collider.attachedRigidbody != null)
-            {
-                Debug.Log("Arrow Stuck Parent");
-
-                arrow.transform.parent = collision.collider.attachedRigidbody.transform;
-
-            }
-            else
-            {
-                StartCoroutine("DestroyStickingArrow");
-            }
-
-            collision.collider.GetComponent<EnemyBehavior>()?.TakeDamage(damage);
+            Debug.Log("Arrow Stuck Parent");
+            
+            arrow.transform.parent = collision.collider.attachedRigidbody.transform;
 
         }
         else
         {
-            StartCoroutine("DestroyArrow");
+            StartCoroutine("DestroyStickingArrow");
         }
-    }
-
-    IEnumerator DestroyArrow()
-    {
-        yield return new WaitForSeconds(waitTime);
-
-        Debug.Log("Arrow Destroyed");
+        
+        collision.collider.GetComponent<EnemyBehavior>()?.TakeDamage(damage);
 
         Destroy(gameObject);
+
     }
 
     IEnumerator DestroyStickingArrow()

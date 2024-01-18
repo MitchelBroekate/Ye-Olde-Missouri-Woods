@@ -12,8 +12,6 @@ public class HealthRegen : MonoBehaviour
 
     private void Awake()
     {
-        //How to change name in Hierarchy
-        //thisGameObject.name = "SaladBar";
         playerScript = FindObjectOfType<PlayerScript>();
     }
 

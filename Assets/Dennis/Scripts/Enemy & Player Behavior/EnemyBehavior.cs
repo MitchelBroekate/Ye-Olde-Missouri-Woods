@@ -9,7 +9,7 @@ public class EnemyBehavior : MonoBehaviour
     [SerializeField]
     int maxEnemyHealth;
     public int currentEnemyHealth;
-    bool isEnemyDead = false;
+    public bool isEnemyDead = false;
     [SerializeField]
     private Animator deathAnimation;
 

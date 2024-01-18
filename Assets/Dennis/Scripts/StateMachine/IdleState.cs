@@ -32,8 +32,13 @@ public class IdleState : State
 
     private void Update()
     {
-        PatrolRoute();
-        CheckPlayerDistance();
+        bool isDead = enemy.GetComponent<EnemyBehavior>().isEnemyDead;
+
+        if (isDead == false)
+        {
+            PatrolRoute();
+            CheckPlayerDistance();
+        }
     }
 
     void PatrolRoute()

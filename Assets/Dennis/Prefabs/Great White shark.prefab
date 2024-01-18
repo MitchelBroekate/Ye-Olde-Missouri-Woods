@@ -107,7 +107,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8750990227575034796}
-  - component: {fileID: 4674090858120723026}
+  - component: {fileID: 481746000186424025}
+  - component: {fileID: 2048426465450596883}
   - component: {fileID: 662300260476047146}
   - component: {fileID: 1187050701608386288}
   - component: {fileID: 5832376266727980539}
@@ -137,8 +138,8 @@ Transform:
   - {fileID: 5134805158523638316}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!64 &4674090858120723026
-MeshCollider:
+--- !u!65 &481746000186424025
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -155,10 +156,30 @@ MeshCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 0}
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 3.5}
+  m_Center: {x: 0.05, y: 0.6, z: -0.4}
+--- !u!65 &2048426465450596883
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 369820997112476237}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 0.6, z: 0.4}
+  m_Center: {x: 0, y: 0.6, z: 1.57}
 --- !u!54 &662300260476047146
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -185,7 +206,7 @@ Rigidbody:
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!95 &1187050701608386288
 Animator:
   serializedVersion: 5
@@ -639,6 +660,10 @@ MonoBehaviour:
   enemy: {fileID: 369820997112476237}
   enemyDamage: 10
   enemyRageValue: 5
+  firePoint: {fileID: 0}
+  fireRate: 0
+  fireCountdown: 0
+  bulletPrefab: {fileID: 0}
   attackAnimation: {fileID: 1187050701608386288}
   animationTime: 6.08
 --- !u!1 &2562264293169711765

@@ -28,8 +28,13 @@ public class ChaseState : State
 
     private void Update()
     {
-        ChasePlayer();
-        InAttackRange();
+        bool isDead = enemy.GetComponent<EnemyBehavior>().isEnemyDead;
+
+        if (isDead == false)
+        {
+            ChasePlayer();
+            InAttackRange();
+        }
     }
 
     void ChasePlayer()

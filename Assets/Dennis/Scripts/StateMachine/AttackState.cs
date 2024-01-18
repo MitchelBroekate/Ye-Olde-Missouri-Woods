@@ -43,12 +43,18 @@ public class AttackState : State
 
     private void Update()
     {
-        if (canAttack == true)
-        {
-            AttackPlayer();
-        }
 
-        fireCountdown -= Time.deltaTime;
+        bool isDead = enemy.GetComponent<EnemyBehavior>().isEnemyDead;
+
+        if (isDead == false)
+        {
+            if (canAttack == true)
+            {
+                AttackPlayer();
+            }
+
+            fireCountdown -= Time.deltaTime;
+        }
     }
 
     void AttackPlayer()
