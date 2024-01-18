@@ -381,7 +381,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 3
 --- !u!114 &5927881851582820299
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -750,6 +750,11 @@ PrefabInstance:
       propertyPath: m_Convex
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -3761969011348929555, guid: 73d333376729f9247bc43d0db178baf6,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8432598085619120540, guid: 73d333376729f9247bc43d0db178baf6,
         type: 3}
       propertyPath: m_Name
@@ -830,10 +835,15 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -3761969011348929555, guid: 73d333376729f9247bc43d0db178baf6, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8432598085619120540, guid: 73d333376729f9247bc43d0db178baf6,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3173829234969589982}
   m_SourcePrefab: {fileID: 100100000, guid: 73d333376729f9247bc43d0db178baf6, type: 3}
 --- !u!4 &7189422240234372642 stripped
 Transform:
@@ -841,6 +851,33 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2128160301721410820}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &7534000746820674712 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8432598085619120540, guid: 73d333376729f9247bc43d0db178baf6,
+    type: 3}
+  m_PrefabInstance: {fileID: 2128160301721410820}
+  m_PrefabAsset: {fileID: 0}
+--- !u!135 &3173829234969589982
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7534000746820674712}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.2
+  m_Center: {x: 0, y: 0.17, z: 0}
 --- !u!23 &8326832124370453837 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: 7928137683247355977, guid: 73d333376729f9247bc43d0db178baf6,
