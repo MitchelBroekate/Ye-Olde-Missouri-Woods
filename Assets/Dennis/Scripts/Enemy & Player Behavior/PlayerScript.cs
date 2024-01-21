@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PlayerScript : MonoBehaviour
 {
@@ -55,6 +56,8 @@ public class PlayerScript : MonoBehaviour
         {
             isDead = true;
             Debug.Log("Player is Dead");
+
+            SceneManager.LoadScene("DeatScene");
         }
     }
 
