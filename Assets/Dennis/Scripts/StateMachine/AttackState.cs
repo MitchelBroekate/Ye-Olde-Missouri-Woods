@@ -1,9 +1,12 @@
+using Oculus.Interaction.PoseDetection.Editor.Generated;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class AttackState : State
 {
+    public AudioSource clip;
+
     public ChaseState chaseState;
     public bool playerOutOfRange;
 
@@ -95,6 +98,8 @@ public class AttackState : State
         canAttack = false;
 
         attackAnimation.SetTrigger("Attack");
+
+        clip.Play();
 
         target.GetComponent<PlayerScript>().PlayerTakeDamage(enemyDamage);
 
