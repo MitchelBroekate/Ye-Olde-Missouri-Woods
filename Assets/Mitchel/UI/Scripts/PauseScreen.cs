@@ -26,9 +26,9 @@ public class PauseScreen : MonoBehaviour
     private GameObject locomotion;
 
     [SerializeField]
-    private GameObject pointerLeft;
-    [SerializeField]
-    private GameObject pointerRight;
+    private GameObject pointerHands1;
+
+
 
     [SerializeField]
     private GameObject uI;
@@ -36,9 +36,7 @@ public class PauseScreen : MonoBehaviour
     private GameObject uIOverlay;
 
     [SerializeField]
-    private GameObject rayLeft;
-    [SerializeField]
-    private GameObject rayRight;
+    private GameObject rayHands;
     #endregion
 
     //void for pausing game/checking if paused, bringing out UI and changing player controls
@@ -53,11 +51,12 @@ public class PauseScreen : MonoBehaviour
 
             locomoter.enableWalk = false;
 
-            pointerLeft.SetActive(false);
-            pointerRight.SetActive(false);
+            pointerHands1.SetActive(false);
 
-            rayLeft.SetActive(true);
-            rayRight.SetActive(true);
+
+            rayHands.SetActive(true);
+
+            
 
             uI.SetActive(true);
             uIOverlay.SetActive(false);
@@ -70,11 +69,9 @@ public class PauseScreen : MonoBehaviour
         {
             locomoter.enableWalk = true;
 
-            pointerLeft.SetActive(true);
-            pointerRight.SetActive(true);
+            pointerHands1.SetActive(true);
 
-            rayLeft.SetActive(false);
-            rayRight.SetActive(false);
+            rayHands.SetActive(false);
 
             uI.SetActive(false);
             uIOverlay.SetActive(true);
