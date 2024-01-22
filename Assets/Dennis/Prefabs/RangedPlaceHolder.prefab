@@ -1143,8 +1143,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6e3a80c8725e814abbb1225ed6bbc59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxEnemyHealth: 20
+  maxEnemyHealth: 10
   currentEnemyHealth: 0
+  isEnemyDead: 0
   deathAnimation: {fileID: 4049705696605201218}
 --- !u!1 &5739877927092412548
 GameObject:

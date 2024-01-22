@@ -12,14 +12,17 @@ public class ChaseState : State
     private bool isMelee;
     [SerializeField]
     private bool isRanged;
+    [SerializeField]
+    private float meleeSpeed;
+    [SerializeField]
+    private float rangedSpeed;
+
 
     [Header("Attributes")]
     [SerializeField]
     private GameObject enemy;
     private Transform target;
     private float rotationSpeed = 1.5f;
-    [SerializeField]
-    private float movementSpeed;
 
     private void Start()
     {
@@ -45,7 +48,7 @@ public class ChaseState : State
         {
             if (distanceToChase <= 10f)
             {
-                enemy.transform.position = Vector3.MoveTowards(transform.position, target.transform.position, movementSpeed * Time.deltaTime);
+                enemy.transform.position = Vector3.MoveTowards(transform.position, target.transform.position, meleeSpeed * Time.deltaTime);
                 Vector3 dir = target.position - enemy.transform.position;
                 Quaternion rotation = Quaternion.Slerp(enemy.transform.rotation, Quaternion.LookRotation(dir), rotationSpeed * Time.deltaTime);
                 enemy.transform.rotation = rotation;
@@ -56,7 +59,7 @@ public class ChaseState : State
         {
             if (distanceToChase <= 20f)
             {
-                enemy.transform.position = Vector3.MoveTowards(transform.position, target.transform.position, movementSpeed * Time.deltaTime);
+                enemy.transform.position = Vector3.MoveTowards(transform.position, target.transform.position, rangedSpeed * Time.deltaTime);
                 Vector3 dir = target.position - enemy.transform.position;
                 Quaternion rotation = Quaternion.Slerp(enemy.transform.rotation, Quaternion.LookRotation(dir), rotationSpeed * Time.deltaTime);
                 enemy.transform.rotation = rotation;
@@ -73,12 +76,12 @@ public class ChaseState : State
             if (distanceToAttack <= 3f)
             {
                 canAttack = true;
-                movementSpeed = 0;
+                meleeSpeed = 0;
             }
             else
             {
                 canAttack = false;
-                movementSpeed = 1.5f;
+                meleeSpeed = 1.5f;
             }
         }
 
@@ -87,12 +90,12 @@ public class ChaseState : State
             if (distanceToAttack <= 10f)
             {
                 canAttack = true;
-                movementSpeed = 0;
+                rangedSpeed = 0;
             }
             else
             {
                 canAttack = false;
-                movementSpeed = 1.5f;
+                rangedSpeed = 0.75f;
             }
         }
     }

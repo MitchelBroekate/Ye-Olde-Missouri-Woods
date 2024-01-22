@@ -45,7 +45,7 @@ public class IdleState : State
     {
         float distanceToPoint = Vector3.Distance(enemy.transform.position, patrolPoints[currentPoint].position);
 
-        if (distanceToPoint >= 2f && canSeePlayer == false)
+        if (distanceToPoint >= 1f && canSeePlayer == false)
         {
             Vector3 dir = patrolPoints[currentPoint].position - enemy.transform.position;
             Quaternion rotation = Quaternion.Slerp(enemy.transform.rotation, Quaternion.LookRotation(dir), rotationSpeed * Time.deltaTime);
