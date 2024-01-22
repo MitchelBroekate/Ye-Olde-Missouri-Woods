@@ -10,6 +10,7 @@ TagManager:
   - Arrow
   - Enemy
   - Apple
+  - Ground
   layers:
   - Default
   - TransparentFX
