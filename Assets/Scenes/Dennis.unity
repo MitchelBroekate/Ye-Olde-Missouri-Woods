@@ -3003,7 +3003,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1509498484
 Transform:
   m_ObjectHideFlags: 0
@@ -3775,12 +3775,10 @@ MonoBehaviour:
   settingsPaused: {fileID: 2081026646}
   quitPaused: {fileID: 2081026645}
   locomotion: {fileID: 2081026644}
-  pointerLeft: {fileID: 2081026643}
-  pointerRight: {fileID: 2081026642}
+  pointerHands1: {fileID: 0}
   uI: {fileID: 2081026641}
   uIOverlay: {fileID: 2081026640}
-  rayLeft: {fileID: 1038354809}
-  rayRight: {fileID: 1517198060}
+  rayHands: {fileID: 0}
 --- !u!4 &2032390659
 Transform:
   m_ObjectHideFlags: 0
@@ -4065,6 +4063,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: P
       objectReference: {fileID: 0}
+    - target: {fileID: 3141720632235795006, guid: 204925250ba4a5d449010ba4ae2cde97,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6735742337533281031, guid: 204925250ba4a5d449010ba4ae2cde97,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -4204,18 +4207,6 @@ GameObject:
 --- !u!1 &2081026641 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6498115883574873893, guid: 204925250ba4a5d449010ba4ae2cde97,
-    type: 3}
-  m_PrefabInstance: {fileID: 2081026634}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &2081026642 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1378015255653454958, guid: 204925250ba4a5d449010ba4ae2cde97,
-    type: 3}
-  m_PrefabInstance: {fileID: 2081026634}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &2081026643 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4745454753190778817, guid: 204925250ba4a5d449010ba4ae2cde97,
     type: 3}
   m_PrefabInstance: {fileID: 2081026634}
   m_PrefabAsset: {fileID: 0}

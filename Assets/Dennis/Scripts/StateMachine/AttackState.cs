@@ -27,7 +27,6 @@ public class AttackState : State
     [SerializeField]
     private Transform firePoint;
     public float fireRate;
-    public float fireCountdown = 0f;
     public GameObject bulletPrefab;
 
 
@@ -55,8 +54,6 @@ public class AttackState : State
             {
                 AttackPlayer();
             }
-
-            fireCountdown -= Time.deltaTime;
         }
     }
 
@@ -78,13 +75,9 @@ public class AttackState : State
 
         if (isRanged == true)
         {
-            if (inAttackRange <= 10f)
+            if (inAttackRange <= 7.5f)
             {
-                if (fireCountdown <= 0f)
-                {
-                    StartCoroutine("RangedAttack");
-                    fireCountdown = 1f / fireRate;
-                }
+                StartCoroutine("RangedAttack");
             }
             else
             {
@@ -125,6 +118,8 @@ public class AttackState : State
         canAttack = false;
 
         attackAnimation.SetTrigger("Attack");
+
+        clip.Play();
 
         yield return new WaitForSeconds(animationTime);
 

@@ -683,7 +683,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88c113d0cc4061b438a1e955cd1b9e5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clip: {fileID: 0}
+  clip: {fileID: 5164955106797134748}
   chaseState: {fileID: 8704076610916471439}
   playerOutOfRange: 0
   isMelee: 0
@@ -693,7 +693,6 @@ MonoBehaviour:
   enemyRageValue: 10
   firePoint: {fileID: 8279705473679330240}
   fireRate: 0.5
-  fireCountdown: 0
   bulletPrefab: {fileID: 4586220129789575228, guid: 5f4b854b9f7ce2c4b9cf1dedea5ebde2,
     type: 3}
   attackAnimation: {fileID: 6813295104876427615}

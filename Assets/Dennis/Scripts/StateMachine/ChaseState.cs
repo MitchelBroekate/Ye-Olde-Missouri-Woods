@@ -46,7 +46,7 @@ public class ChaseState : State
 
         if (isMelee == true)
         {
-            if (distanceToChase <= 10f)
+            if (distanceToChase <= 5f)
             {
                 enemy.transform.position = Vector3.MoveTowards(transform.position, target.transform.position, meleeSpeed * Time.deltaTime);
                 Vector3 dir = target.position - enemy.transform.position;
@@ -57,7 +57,7 @@ public class ChaseState : State
 
         if (isRanged == true)
         {
-            if (distanceToChase <= 20f)
+            if (distanceToChase <= 5f)
             {
                 enemy.transform.position = Vector3.MoveTowards(transform.position, target.transform.position, rangedSpeed * Time.deltaTime);
                 Vector3 dir = target.position - enemy.transform.position;
@@ -87,7 +87,7 @@ public class ChaseState : State
 
         if (isRanged == true)
         {
-            if (distanceToAttack <= 10f)
+            if (distanceToAttack <= 7.5f)
             {
                 canAttack = true;
                 rangedSpeed = 0;

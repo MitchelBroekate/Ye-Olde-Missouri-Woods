@@ -66,7 +66,7 @@ public class IdleState : State
 
         if (isMelee == true)
         {
-            if (distanceToPlayer <= 10f)
+            if (distanceToPlayer <= 5f)
             {
                 canSeePlayer = true;
             }
@@ -74,7 +74,7 @@ public class IdleState : State
 
         if (isRanged == true)
         {
-            if (distanceToPlayer <= 20f)
+            if (distanceToPlayer <= 5f)
             {
                 canSeePlayer = true;
             }
