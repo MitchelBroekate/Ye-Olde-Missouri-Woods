@@ -1152,7 +1152,9 @@ MonoBehaviour:
   isMelee: 1
   isRanged: 0
   enemy: {fileID: 7388754213369504517}
-  patrolPoints: []
+  patrolPoints:
+  - {fileID: 0}
+  - {fileID: 0}
   movementSpeed: 1.25
 --- !u!1 &555448298546581681
 GameObject:
@@ -7679,7 +7681,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -876546973899608171, guid: e10c5c8bf4daab940b8194c492a6a77b, type: 3}
+  - {fileID: 2100000, guid: 1c3be8b1488d928458a35d65bb22a65f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -8984,7 +8986,7 @@ MonoBehaviour:
   isMelee: 1
   isRanged: 0
   enemy: {fileID: 7388754213369504517}
-  enemyDamage: 10
+  enemyDamage: 5
   enemyRageValue: 5
   firePoint: {fileID: 0}
   fireRate: 0
@@ -8992,7 +8994,7 @@ MonoBehaviour:
   cooldown: 0
   isCooldown: 0
   attackAnimation: {fileID: 5047146138479818009}
-  animationTime: 0
+  animationTime: 2.1
 --- !u!1 &4092028676113435291
 GameObject:
   m_ObjectHideFlags: 0
@@ -11503,7 +11505,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -876546973899608171, guid: e10c5c8bf4daab940b8194c492a6a77b, type: 3}
+  - {fileID: 2100000, guid: 1c3be8b1488d928458a35d65bb22a65f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -15919,9 +15921,9 @@ Transform:
   m_GameObject: {fileID: 7388754213369504517}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.738, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.75, y: 0.75, z: 0.75}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 4703345599208921056}
   - {fileID: 7852816476378719257}
@@ -16037,7 +16039,7 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 2
