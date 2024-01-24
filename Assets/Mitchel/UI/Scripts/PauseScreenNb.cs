@@ -32,6 +32,8 @@ public class PauseScreenNB : MonoBehaviour
     [SerializeField]
     private Slider sliderSFX;
 
+    public Coroutine coroutine;
+
     public GameObject buttonQuit1;
     public GameObject buttonQuit2;
 
@@ -78,9 +80,6 @@ public class PauseScreenNB : MonoBehaviour
     {
         if (isPaused)
         {
-            buttonResume.SetActive(false);
-            StartCoroutine(Wait(1f));
-            buttonResume.SetActive(true);
             uiOverlay.SetActive(true);
             ui.SetActive(false);
 
@@ -95,9 +94,6 @@ public class PauseScreenNB : MonoBehaviour
     {
         if (isPaused)
         {
-            buttonSettings.SetActive(false);
-            StartCoroutine(Wait(1f));
-            buttonSettings.SetActive(true);
             optionsPaused.SetActive(false);
             settingsPaused.SetActive(true);
         }
@@ -113,18 +109,10 @@ public class PauseScreenNB : MonoBehaviour
 
             if (quitPaused.activeInHierarchy == true)
             {
-                buttonQuit1.SetActive(false);
-                StartCoroutine(Wait(1f));
-                buttonQuit1.SetActive(false);
-
                 Application.Quit();
             }
             else
             {
-
-                buttonQuit2.SetActive(false);
-                StartCoroutine(Wait(1f));
-                buttonQuit2.SetActive(false);
                 optionsPaused.SetActive(false);
                 quitPaused.SetActive(true);
             }
@@ -140,17 +128,11 @@ public class PauseScreenNB : MonoBehaviour
 
             if (settingsPaused.activeInHierarchy == true)
             {
-                buttonBack1.SetActive(false);
-                StartCoroutine(Wait(1f));
-                buttonBack1.SetActive(true);
                 settingsPaused.SetActive(false);
                 optionsPaused.SetActive(true);
             }
             else
             {
-                buttonBack2.SetActive(false);
-                StartCoroutine(Wait(1f));
-                buttonBack2.SetActive(true);
                 quitPaused.SetActive(false);
                 optionsPaused.SetActive(true);
             }
@@ -159,58 +141,32 @@ public class PauseScreenNB : MonoBehaviour
 
     public void VolumeMasterUp()
     {
-        masterUp.SetActive(false);
-        StartCoroutine(Wait(1f));
-        masterUp.SetActive(true);
-
         sliderMaster.value += 0.1f;
     }
 
     public void VolumeMasterDown()
     {
-        masterDown.SetActive(false);
-        StartCoroutine(Wait(1f));
-        masterDown.SetActive(true);
-
         sliderMaster.value -= 0.1f;
     }
 
     public void VolumeSFXUp()
     {
-        sfxUp.SetActive(false);
-        StartCoroutine(Wait(1f));
-        sfxUp.SetActive(true);
-
         sliderSFX.value += 0.1f;
+
     }
 
     public void VolumeSFXDown()
     {
-
-        sfxDown.SetActive(false);
-        StartCoroutine(Wait(1f));
-        sfxDown.SetActive(true);
-
         sliderSFX.value -= 0.1f;
     }
 
     public void VolumeMusicUp()
     {
-
-        musicUp.SetActive(false);
-        StartCoroutine(Wait(1f));
-        musicUp.SetActive(true);
-
         sliderMusic.value += 0.1f;
     }
 
     public void VolumeMusicDown()
     {
-
-        musicDown.SetActive(false);
-        StartCoroutine(Wait(1f));
-        musicDown.SetActive(true);
-
         sliderMusic.value -= 0.1f;
     }
 
