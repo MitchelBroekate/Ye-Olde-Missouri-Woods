@@ -821,6 +821,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6609430562109696379, guid: 5fca3702cdf1a214a94e69dcfa704e17,
         type: 3}
+      propertyPath: _pointableElement
+      value: 
+      objectReference: {fileID: 1568083024}
+    - target: {fileID: 6609430562109696379, guid: 5fca3702cdf1a214a94e69dcfa704e17,
+        type: 3}
       propertyPath: _cancelSelectNormal
       value: 0
       objectReference: {fileID: 0}
@@ -1510,6 +1515,11 @@ PrefabInstance:
       propertyPath: _enterHoverNormal
       value: 0.08
       objectReference: {fileID: 0}
+    - target: {fileID: 6609430562109696379, guid: 5fca3702cdf1a214a94e69dcfa704e17,
+        type: 3}
+      propertyPath: _pointableElement
+      value: 
+      objectReference: {fileID: 1568083024}
     - target: {fileID: 6609430562109696379, guid: 5fca3702cdf1a214a94e69dcfa704e17,
         type: 3}
       propertyPath: _cancelSelectNormal
@@ -2843,18 +2853,6 @@ MonoBehaviour:
   sliderMaster: {fileID: 685551711}
   sliderMusic: {fileID: 1194265351}
   sliderSFX: {fileID: 1457165547}
-  buttonQuit1: {fileID: 1096472052}
-  buttonQuit2: {fileID: 354119157}
-  buttonBack1: {fileID: 1150328021}
-  buttonBack2: {fileID: 1122172506}
-  buttonSettings: {fileID: 49886998}
-  buttonResume: {fileID: 1471967570}
-  masterUp: {fileID: 172323580}
-  masterDown: {fileID: 1783162732}
-  musicUp: {fileID: 2035033433}
-  musicDown: {fileID: 103773406}
-  sfxUp: {fileID: 2055160704}
-  sfxDown: {fileID: 1821298630}
 --- !u!114 &333895919
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3729,7 +3727,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &411054460
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5576,7 +5574,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &735687650
 Transform:
   m_ObjectHideFlags: 0
@@ -8009,6 +8007,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6609430562109696379, guid: 5fca3702cdf1a214a94e69dcfa704e17,
         type: 3}
+      propertyPath: _pointableElement
+      value: 
+      objectReference: {fileID: 1568083024}
+    - target: {fileID: 6609430562109696379, guid: 5fca3702cdf1a214a94e69dcfa704e17,
+        type: 3}
       propertyPath: _cancelSelectNormal
       value: 0
       objectReference: {fileID: 0}
@@ -8362,6 +8365,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6609430562109696379, guid: 5fca3702cdf1a214a94e69dcfa704e17,
         type: 3}
+      propertyPath: _pointableElement
+      value: 
+      objectReference: {fileID: 1568083024}
+    - target: {fileID: 6609430562109696379, guid: 5fca3702cdf1a214a94e69dcfa704e17,
+        type: 3}
       propertyPath: _cancelSelectNormal
       value: 0
       objectReference: {fileID: 0}
@@ -8651,6 +8659,11 @@ PrefabInstance:
       propertyPath: _enterHoverNormal
       value: 0.08
       objectReference: {fileID: 0}
+    - target: {fileID: 6609430562109696379, guid: 5fca3702cdf1a214a94e69dcfa704e17,
+        type: 3}
+      propertyPath: _pointableElement
+      value: 
+      objectReference: {fileID: 1568083024}
     - target: {fileID: 6609430562109696379, guid: 5fca3702cdf1a214a94e69dcfa704e17,
         type: 3}
       propertyPath: _cancelSelectNormal
@@ -9157,7 +9170,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1194041321
 RectTransform:
   m_ObjectHideFlags: 0
@@ -12523,6 +12536,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6609430562109696379, guid: 5fca3702cdf1a214a94e69dcfa704e17,
         type: 3}
+      propertyPath: _pointableElement
+      value: 
+      objectReference: {fileID: 1568083024}
+    - target: {fileID: 6609430562109696379, guid: 5fca3702cdf1a214a94e69dcfa704e17,
+        type: 3}
       propertyPath: _cancelSelectNormal
       value: 0
       objectReference: {fileID: 0}
@@ -13066,6 +13084,11 @@ PrefabInstance:
       propertyPath: _enterHoverNormal
       value: 0.08
       objectReference: {fileID: 0}
+    - target: {fileID: 6609430562109696379, guid: 5fca3702cdf1a214a94e69dcfa704e17,
+        type: 3}
+      propertyPath: _pointableElement
+      value: 
+      objectReference: {fileID: 1568083024}
     - target: {fileID: 6609430562109696379, guid: 5fca3702cdf1a214a94e69dcfa704e17,
         type: 3}
       propertyPath: _cancelSelectNormal
@@ -14620,6 +14643,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6609430562109696379, guid: 5fca3702cdf1a214a94e69dcfa704e17,
         type: 3}
+      propertyPath: _pointableElement
+      value: 
+      objectReference: {fileID: 1568083024}
+    - target: {fileID: 6609430562109696379, guid: 5fca3702cdf1a214a94e69dcfa704e17,
+        type: 3}
       propertyPath: _cancelSelectNormal
       value: 0
       objectReference: {fileID: 0}
@@ -15183,6 +15211,11 @@ PrefabInstance:
       propertyPath: _enterHoverNormal
       value: 0.08
       objectReference: {fileID: 0}
+    - target: {fileID: 6609430562109696379, guid: 5fca3702cdf1a214a94e69dcfa704e17,
+        type: 3}
+      propertyPath: _pointableElement
+      value: 
+      objectReference: {fileID: 1568083024}
     - target: {fileID: 6609430562109696379, guid: 5fca3702cdf1a214a94e69dcfa704e17,
         type: 3}
       propertyPath: _cancelSelectNormal

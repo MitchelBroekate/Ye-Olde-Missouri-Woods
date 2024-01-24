@@ -31,25 +31,6 @@ public class PauseScreenNB : MonoBehaviour
     private Slider sliderMusic;
     [SerializeField]
     private Slider sliderSFX;
-
-    public Coroutine coroutine;
-
-    public GameObject buttonQuit1;
-    public GameObject buttonQuit2;
-
-    public GameObject buttonBack1;
-    public GameObject buttonBack2;
-
-    public GameObject buttonSettings;
-
-    public GameObject buttonResume;
-
-    public GameObject masterUp;
-    public GameObject masterDown;
-    public GameObject musicUp;
-    public GameObject musicDown;
-    public GameObject sfxUp;
-    public GameObject sfxDown;
     #endregion
 
     //void for pausing game/checking if paused, bringing out UI and changing player controls
@@ -168,10 +149,5 @@ public class PauseScreenNB : MonoBehaviour
     public void VolumeMusicDown()
     {
         sliderMusic.value -= 0.1f;
-    }
-
-    IEnumerator Wait(float waitTime)
-    {
-        yield return new WaitForSeconds(waitTime);
     }
 }
