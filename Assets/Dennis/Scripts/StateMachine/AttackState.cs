@@ -28,6 +28,10 @@ public class AttackState : State
     private Transform firePoint;
     public float fireRate;
     public GameObject bulletPrefab;
+    [SerializeField]
+    private float cooldown;
+    [SerializeField]
+    private bool isCooldown;
 
 
     [Header("Animation Attributes")]
@@ -65,6 +69,7 @@ public class AttackState : State
         {
             if (inAttackRange <= 3f)
             {
+                playerOutOfRange = false;
                 StartCoroutine("Attack");
             }
             else
@@ -75,8 +80,9 @@ public class AttackState : State
 
         if (isRanged == true)
         {
-            if (inAttackRange <= 7.5f)
+            if (inAttackRange <= 7.5f && !isCooldown)
             {
+                playerOutOfRange = false;
                 StartCoroutine("RangedAttack");
             }
             else
@@ -88,10 +94,10 @@ public class AttackState : State
 
     IEnumerator Attack()
     {
+
         canAttack = false;
 
-        attackAnimation.SetTrigger("Attack");
-
+        attackAnimation.SetBool("Attack", true);
         clip.Play();
 
         target.GetComponent<PlayerScript>().PlayerTakeDamage(enemyDamage);
@@ -102,7 +108,7 @@ public class AttackState : State
 
         canAttack = true;
 
-        attackAnimation.ResetTrigger("Attack");
+        attackAnimation.SetBool("Attack", false);
     }
 
     IEnumerator RangedAttack()
@@ -117,15 +123,19 @@ public class AttackState : State
 
         canAttack = false;
 
-        attackAnimation.SetTrigger("Attack");
+        attackAnimation.SetBool("Attack", true);
 
         clip.Play();
 
-        yield return new WaitForSeconds(animationTime);
+        isCooldown = true;
+
+        yield return new WaitForSeconds(cooldown);
 
         canAttack = true;
 
-        attackAnimation.ResetTrigger("Attack");
+        attackAnimation.SetBool("Attack", false);
+
+        isCooldown = false;
     }
 
     public override State RunCurrentState()

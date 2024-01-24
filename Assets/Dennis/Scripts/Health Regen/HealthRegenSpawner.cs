@@ -15,7 +15,6 @@ public class HealthRegenSpawner : MonoBehaviour
     private float cooldown = 10f;
     private bool canSpawn;
 
-
     private void Awake()
     {
         target = GameObject.Find("OVRCameraRig").transform;

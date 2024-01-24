@@ -665,7 +665,6 @@ MonoBehaviour:
   enemyRageValue: 5
   firePoint: {fileID: 0}
   fireRate: 0
-  fireCountdown: 0
   bulletPrefab: {fileID: 0}
   attackAnimation: {fileID: 1187050701608386288}
   animationTime: 6.08
@@ -1732,7 +1731,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: -8208363674989091338, guid: d9712c3c485d6b14e80c1caf9c62fe0a,
     type: 2}
   m_audioClip: {fileID: 8300000, guid: ef4d9f704ecb2e147803f331cd1816c6, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0

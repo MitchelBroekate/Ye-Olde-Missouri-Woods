@@ -36,7 +36,7 @@ public class BowController : MonoBehaviour
     [SerializeField]
     private AudioSource stringPulledAudioSource;
 
-    public UnityEvent OnBowPulled;
+    public UnityEvent onBowPulled;
     public UnityEvent<float> onBowReleased;
 
     #region Awake + Update
@@ -87,7 +87,7 @@ public class BowController : MonoBehaviour
 
     public void PrepareBowString()
     {
-        OnBowPulled?.Invoke();
+        onBowPulled?.Invoke();
 
         interactor = handObject.transform;
     }
