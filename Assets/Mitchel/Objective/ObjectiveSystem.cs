@@ -39,15 +39,18 @@ public class ObjectiveSystem : MonoBehaviour
     private void Start()
     {
         audioSource.clip = intro;
+        audioSource.Play();
         canvas.transform.position = v1.transform.position;
         if (!audioSource.isPlaying)
         {
             audioSource.clip = tutorial;
+            audioSource.Play();
         }
 
         if (!audioSource.isPlaying)
         {
             audioSource.clip = attack1;
+            audioSource.Play();
         }
     }
 
@@ -56,36 +59,42 @@ public class ObjectiveSystem : MonoBehaviour
         if(area1.transform.childCount < 1)
         {
             audioSource.clip = attack2;
+            audioSource.Play();
             canvas.transform.position = v2.transform.position;
         }
 
         if (area2.transform.childCount < 1)
         {
             audioSource.clip = attack3;
+            audioSource.Play();
             canvas.transform.position = v3.transform.position;
         }
 
         if (area3.transform.childCount < 1)
         {
             audioSource.clip = attack4;
+            audioSource.Play();
             canvas.transform.position = v4.transform.position;
         }
 
         if (area4.transform.childCount < 1)
         {
             audioSource.clip = attack5;
+            audioSource.Play();
             canvas.transform.position = v5.transform.position;
         }
 
         if (area5.transform.childCount < 1)
         {
             audioSource.clip = attack6;
+            audioSource.Play();
             canvas.transform.position = v1.transform.position;
         }
 
         if (area6.transform.childCount < 1)
         {
             audioSource.clip = outro;
+            audioSource.Play();
             canvas.SetActive(false);
         }
 
