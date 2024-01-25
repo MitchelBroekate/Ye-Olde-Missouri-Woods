@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ObjectiveSystem : MonoBehaviour
 {
@@ -96,6 +97,11 @@ public class ObjectiveSystem : MonoBehaviour
             audioSource.clip = outro;
             audioSource.Play();
             canvas.SetActive(false);
+
+            if (!audioSource.isPlaying)
+            {
+                SceneManager.LoadScene("WinScene");
+            }
         }
 
     }

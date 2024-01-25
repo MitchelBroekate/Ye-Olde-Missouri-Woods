@@ -4,6 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class PauseScreenNB : MonoBehaviour
@@ -90,7 +91,7 @@ public class PauseScreenNB : MonoBehaviour
 
             if (quitPaused.activeInHierarchy == true)
             {
-                Application.Quit();
+                SceneManager.LoadScene("MainMenu");
             }
             else
             {
